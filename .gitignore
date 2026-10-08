@@ -1,0 +1,11 @@
+# Local working copies and review material
+backup-*/
+screenshots/
+
+# Local tool state
+.remember/
+.claude/settings.local.json
+
+# OS
+Thumbs.db
+.DS_Store

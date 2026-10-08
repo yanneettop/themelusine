@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Font lab — The Melusine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=GFS+Didot&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Manrope:wght@400;500;600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,401,500&f[]=switzer@400,500,600&f[]=gambetta@400,401,500&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#0a1a20; --gold:#c7a15a; --gold-2:#e0c48c; --light:#e9e4d9; --muted:#a4b2b2; --paper:#f4efe6; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #06121a; color: var(--light); font-family: system-ui, sans-serif; }
+  header { padding: 32px 24px 8px; max-width: 1400px; margin: 0 auto; }
+  header h1 { font-size: 14px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin: 0 0 6px; }
+  header p { margin: 0; color: var(--muted); font-size: 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; padding: 24px; max-width: 1400px; margin: 0 auto; }
+  .card { background: var(--ink); border: 1px solid rgba(233,228,217,.12); display: flex; flex-direction: column; }
+  .card__top { padding: 28px 28px 24px; flex: 1; }
+  .tag { display: inline-block; font: 600 11px/1 system-ui; letter-spacing: .16em; text-transform: uppercase; color: var(--ink); background: var(--gold); padding: 6px 10px; margin-bottom: 22px; }
+  .tag--cur { background: #5d6b6e; color: var(--light); }
+  .word { font-size: 15px; letter-spacing: .28em; text-transform: uppercase; color: var(--gold-2); margin: 0 0 26px; }
+  .h { font-size: 52px; line-height: .98; margin: 0 0 18px; font-weight: 400; }
+  .h em { color: var(--gold-2); }
+  .lede { font-size: 15px; line-height: 1.65; color: rgba(233,228,217,.8); margin: 0 0 22px; }
+  .btn { display: inline-block; background: var(--gold); color: var(--ink); padding: 14px 22px; font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+  .menu { background: var(--paper); color: var(--ink); padding: 22px 28px; }
+  .row { display: flex; align-items: baseline; gap: 10px; }
+  .row b { font-weight: 500; font-size: 23px; }
+  .row i { flex: 1; border-bottom: 1px dotted rgba(10,26,32,.3); transform: translateY(-5px); }
+  .row span { font-size: 21px; color: #9a7a3c; }
+  .menu p { margin: 4px 0 16px; font-size: 13.5px; color: #5d6b6e; }
+  .menu p:last-child { margin-bottom: 0; }
+  .note { padding: 16px 28px 22px; font-size: 13px; color: var(--muted); line-height: 1.55; border-top: 1px solid rgba(233,228,217,.1); }
+  .note strong { color: var(--light); }
+
+  /* Pairings */
+  .a .d { font-family: "Cormorant Garamond", serif; } .a .s { font-family: "Manrope", sans-serif; }
+  .b .d { font-family: "Bodoni Moda", serif; font-optical-sizing: auto; } .b .s { font-family: "Hanken Grotesk", sans-serif; }
+  .b .h { font-size: 48px; letter-spacing: -.01em; }
+  .c .d { font-family: "GFS Didot", serif; } .c .s { font-family: "Switzer", sans-serif; }
+  .c .h em { font-style: normal; }
+  .d1 .d { font-family: "Zodiak", serif; } .d1 .s { font-family: "General Sans", sans-serif; }
+  .d1 .h { font-size: 48px; letter-spacing: -.02em; }
+  .e .d { font-family: "Gambetta", serif; } .e .s { font-family: "Switzer", sans-serif; }
+  .e .h { font-size: 50px; letter-spacing: -.02em; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Font lab</h1>
+  <p>Same content, five type pairings. A is what the site uses now.</p>
+</header>
+<div class="grid">
+
+  <article class="card a">
+    <div class="card__top">
+      <span class="tag tag--cur">A · Current</span>
+      <p class="word d">The Melusine</p>
+      <h2 class="h d">British catch,<br><em>Mediterranean hand.</em></h2>
+      <p class="lede s">A small dockside seafood restaurant in Ivory House. The menu follows the day's catch.</p>
+      <span class="btn s">Book a table</span>
+    </div>
+    <div class="menu">
+      <div class="row"><b class="d">Grilled octopus tentacle</b><i></i><span class="d">34</span></div>
+      <p class="s">fava, salty fingers, grumolo leaves</p>
+      <div class="row"><b class="d">Scottish langoustines (3)</b><i></i><span class="d">19</span></div>
+      <p class="s">peach-flavoured mayonnaise</p>
+    </div>
+    <p class="note s"><strong>Cormorant Garamond + Manrope.</strong> Elegant but it's the default "luxury restaurant" pairing on thousands of templates. No link to the logo.</p>
+  </article>
+
+  <article class="card b">
+    <div class="card__top">
+      <span class="tag">B · Recommended</span>
+      <p class="word d">The Melusine</p>
+      <h2 class="h d">British catch,<br><em>Mediterranean hand.</em></h2>
+      <p class="lede s">A small dockside seafood restaurant in Ivory House. The menu follows the day's catch.</p>
+      <span class="btn s">Book a table</span>
+    </div>
+    <div class="menu">
+      <div class="row"><b class="d">Grilled octopus tentacle</b><i></i><span class="d">34</span></div>
+      <p class="s">fava, salty fingers, grumolo leaves</p>
+      <div class="row"><b class="d">Scottish langoustines (3)</b><i></i><span class="d">19</span></div>
+      <p class="s">peach-flavoured mayonnaise</p>
+    </div>
+    <p class="note s"><strong>Bodoni Moda + Hanken Grotesk.</strong> High-contrast Didone that matches the logo wordmark. Optical sizes keep small menu text readable. Free (Google Fonts).</p>
+  </article>
+
+  <article class="card c">
+    <div class="card__top">
+      <span class="tag">C · The Greek one</span>
+      <p class="word d">The Melusine</p>
+      <h2 class="h d">British catch,<br><em>Mediterranean hand.</em></h2>
+      <p class="lede s">A small dockside seafood restaurant in Ivory House. The menu follows the day's catch.</p>
+      <span class="btn s">Book a table</span>
+    </div>
+    <div class="menu">
+      <div class="row"><b class="d">Grilled octopus tentacle</b><i></i><span class="d">34</span></div>
+      <p class="s">fava, salty fingers, grumolo leaves</p>
+      <div class="row"><b class="d">Scottish langoustines (3)</b><i></i><span class="d">19</span></div>
+      <p class="s">peach-flavoured mayonnaise</p>
+    </div>
+    <p class="note s"><strong>GFS Didot + Switzer.</strong> From the Greek Font Society, based on 19th-century Greek Didot. Great story for a Greek chef. Only one weight, no italic, so it's less flexible.</p>
+  </article>
+
+  <article class="card d1">
+    <div class="card__top">
+      <span class="tag">D · Contemporary</span>
+      <p class="word d">The Melusine</p>
+      <h2 class="h d">British catch,<br><em>Mediterranean hand.</em></h2>
+      <p class="lede s">A small dockside seafood restaurant in Ivory House. The menu follows the day's catch.</p>
+      <span class="btn s">Book a table</span>
+    </div>
+    <div class="menu">
+      <div class="row"><b class="d">Grilled octopus tentacle</b><i></i><span class="d">34</span></div>
+      <p class="s">fava, salty fingers, grumolo leaves</p>
+      <div class="row"><b class="d">Scottish langoustines (3)</b><i></i><span class="d">19</span></div>
+      <p class="s">peach-flavoured mayonnaise</p>
+    </div>
+    <p class="note s"><strong>Zodiak + General Sans.</strong> Sharp, editorial serif with lots of personality. Free for commercial use (Fontshare). Feels more "new London opening".</p>
+  </article>
+
+  <article class="card e">
+    <div class="card__top">
+      <span class="tag">E · Warm</span>
+      <p class="word d">The Melusine</p>
+      <h2 class="h d">British catch,<br><em>Mediterranean hand.</em></h2>
+      <p class="lede s">A small dockside seafood restaurant in Ivory House. The menu follows the day's catch.</p>
+      <span class="btn s">Book a table</span>
+    </div>
+    <div class="menu">
+      <div class="row"><b class="d">Grilled octopus tentacle</b><i></i><span class="d">34</span></div>
+      <p class="s">fava, salty fingers, grumolo leaves</p>
+      <div class="row"><b class="d">Scottish langoustines (3)</b><i></i><span class="d">19</span></div>
+      <p class="s">peach-flavoured mayonnaise</p>
+    </div>
+    <p class="note s"><strong>Gambetta + Switzer.</strong> Soft, bookish serif. Friendlier, more neighbourhood bistro than fine dining. Free (Fontshare).</p>
+  </article>
+
+</div>
+</body>
+</html>
