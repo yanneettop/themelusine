@@ -1,0 +1,44 @@
+{
+  "account": "themelusine_skd",
+  "profile": "https://www.instagram.com/themelusine_skd/",
+  "selection": "static",
+  "retrieved_on": "2026-10-08",
+  "photos": [
+    {
+      "files": [
+        "instagram-fish-dish-400.webp",
+        "instagram-fish-dish-800.webp"
+      ],
+      "post": "https://www.instagram.com/p/Chrp48WI1DL/",
+      "description": "A fish dish on a white plate beside the docks",
+      "source": "Public Instagram post embed"
+    },
+    {
+      "files": [
+        "instagram-prawns-400.webp",
+        "instagram-prawns-800.webp"
+      ],
+      "post": "https://www.instagram.com/p/B3OxsdknSEA/",
+      "description": "Prawns and shellfish on a wire rack",
+      "source": "Public Instagram post embed"
+    },
+    {
+      "files": [
+        "instagram-wine-moment-400.webp",
+        "instagram-wine-moment-800.webp"
+      ],
+      "post": "https://www.instagram.com/p/DeJuAhuosrm/",
+      "description": "A black and white photograph of a hand holding a wine glass beside a bottle",
+      "source": "Public Instagram post embed"
+    },
+    {
+      "files": [
+        "instagram-dessert-400.webp",
+        "instagram-dessert-800.webp"
+      ],
+      "post": "https://www.instagram.com/p/Dd32grNI1GO/",
+      "description": "A dessert topped with nuts and small yellow fruits, surrounded by a ring of golden sauce",
+      "source": "Public Instagram post embed"
+    }
+  ]
+}

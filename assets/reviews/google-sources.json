@@ -1,0 +1,44 @@
+{
+  "listing": "https://www.google.com/maps?cid=12584058579869944059",
+  "placeId": "ChIJRTxciuIDdkgR-8ja7ZqOo64",
+  "rating": 4.6,
+  "reviewCount": 420,
+  "checkedOn": "2026-10-08",
+  "ratingSource": "Google Maps public listing, viewed directly",
+  "reviewSource": "https://www.sluurpy.com/en/london/restaurant/7990646/the-melusine/reviews",
+  "reviewAttribution": "Sluurpy labels each selected review as a Google review. The public Google listing requires sign-in to view review text and count.",
+  "selection": "static excerpts",
+  "reviews": [
+    {
+      "author": "Yagmur Kocak",
+      "rating": 5,
+      "quote": "Every dish was unique and delicious."
+    },
+    {
+      "author": "Alice Vaughan",
+      "rating": 5,
+      "quote": "Exceptional food, service and atmosphere."
+    },
+    {
+      "author": "Nora R",
+      "rating": 5,
+      "quote": "We enjoyed every visit. Nice vibe."
+    },
+    {
+      "author": "Christine",
+      "rating": 5,
+      "quote": "I had a really lovely time here."
+    },
+    {
+      "author": "Tony Bloomfield",
+      "rating": 5,
+      "quote": "The staff were excellent."
+    },
+    {
+      "author": "Becca",
+      "rating": 5,
+      "quote": "A really enjoyable evening."
+    }
+  ],
+  "reviewCountSource": "Confirmed directly by the user on 2026-10-08: 4.6 from 420 reviews"
+}

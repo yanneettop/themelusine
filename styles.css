@@ -310,6 +310,28 @@ em { font-style: normal; }
 .locate__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; }
 .locate__actions .link-arrow { color: var(--white); }
 
+/* Header: compact gold mark and white original wordmark */
+.brand--horizontal { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.brand--horizontal .brand__mark { width: 40px; height: 40px; object-fit: contain; }
+.brand__wordmark { display: block; width: 190px; height: 16px; opacity: .78; background: url("assets/logo-full-black.png") center bottom / 100% auto no-repeat; filter: brightness(0) invert(1); }
+@media (max-width: 1100px) {
+  .brand--horizontal { gap: 10px; }
+  .brand--horizontal .brand__mark { width: 36px; height: 36px; }
+  .brand__wordmark { width: 165px; height: 14px; }
+}
+@media (max-width: 980px) {
+  .brand--horizontal .brand__mark { width: 32px; height: 32px; }
+  .brand__wordmark { width: 140px; height: 12px; }
+  .nav__book .long { display: none; }
+  .nav__book .short { display: inline; }
+}
+@media (max-width: 420px) {
+  .brand--horizontal { gap: 8px; }
+  .brand--horizontal .brand__mark { width: 30px; height: 30px; }
+  .brand__wordmark { width: 116px; height: 10px; }
+  .nav__ig { display: none; }
+}
+
 /* ---------- Footer ---------- */
 .footer { background: var(--navy-deep); color: var(--grey-soft); padding: 64px 0 40px; font-size: 13px; text-align: center; }
 .footer__logo { display: inline-block; line-height: 0; margin-bottom: 14px; }
@@ -449,28 +471,37 @@ em { font-style: normal; }
 /* ---------- Home: a shorter route from food to the dining room ---------- */
 .page-index main > .section { --section: clamp(48px, 6vw, 80px); }
 .page-index .display { font-size: clamp(32px, 3.6vw, 48px); line-height: 1.12; text-wrap: balance; }
+.page-index .menu { background: var(--grey-50); color: var(--charcoal); }
+.page-index .menu :focus-visible { outline-color: var(--teal); }
 .page-index .section-head { gap: 24px; align-items: center; margin-bottom: 28px; }
 .page-index .section-head .display { margin-bottom: 0; }
-.page-index .section-head__note { margin: 0; max-width: 360px; }
+.page-index .section-head__note { margin: 0; max-width: 360px; color: var(--charcoal-soft); }
 .home-food__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: start; }
 .home-food__photo { margin: 0; }
 .home-food__photo img { width: 100%; aspect-ratio: 1; object-fit: cover; }
-.home-food__photo figcaption { margin-top: 10px; font-size: 13px; color: var(--grey-soft); }
+.home-food__photo figcaption { margin-top: 10px; font-size: 13px; color: var(--charcoal-soft); }
 .page-index .catch-grid { grid-template-columns: 1fr; gap: 0; }
-.page-index .catch-card { padding: 18px 0; }
-.page-index .catch-card__number { display: block; text-transform: uppercase; }
+.page-index .catch-card { padding: 18px 0; border-color: var(--line-dark); }
+.page-index .catch-card__number { display: block; text-transform: uppercase; color: var(--teal); }
 .catch-card__heading { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-top: 8px; }
-.page-index .catch-card h3 { margin: 0; font-size: 24px; font-weight: 400; line-height: 1.25; text-wrap: balance; }
-.page-index .catch-card p { max-width: none; margin: 8px 0 0; }
-.page-index .catch-card__price { flex: none; font-size: 17px; line-height: 1.35; white-space: nowrap; }
-.page-index .catch-card__price small { margin-top: 3px; font-size: 11px; }
+.page-index .catch-card h3 { margin: 0; font-size: 24px; font-weight: 400; line-height: 1.25; text-wrap: balance; color: var(--navy); }
+.page-index .catch-card p { max-width: none; margin: 8px 0 0; color: var(--charcoal-soft); }
+.page-index .catch-card__price { flex: none; font-size: 17px; line-height: 1.35; white-space: nowrap; color: var(--navy); }
+.page-index .catch-card__price small { margin-top: 3px; font-size: 11px; color: var(--charcoal-soft); }
 .page-index .menu__links { justify-content: flex-start; margin-top: 24px; }
+.page-index .story { background: var(--navy); color: var(--white); }
+.page-index .story :focus-visible { outline-color: var(--gold); }
+.page-index .story__text > p:not(.eyebrow) { color: var(--grey); }
+.page-index .story__text strong, .page-index .story .link-arrow { color: var(--white); }
 .page-index .story__grid { gap: clamp(28px, 5vw, 64px); }
 .page-index .story__img::after { content: none; }
 .page-index .story__img img { aspect-ratio: 4 / 3; transform: none; transition: none; }
 .page-index .story .display { margin-bottom: 22px; }
 .story__links { display: flex; flex-wrap: wrap; gap: 14px 24px; margin-top: 24px; }
-.page-index .events__body p { font-size: 16px; }
+.page-index .events { background: var(--navy); color: var(--white); }
+.page-index .events :focus-visible { outline-color: var(--gold); }
+.page-index .events__body p { font-size: 16px; color: var(--grey); }
+.page-index .events__body strong { color: var(--white); }
 .page-index .events__ctas { gap: 18px; margin-top: 24px; }
 @media (max-width: 860px) {
   .home-food__grid, .page-index .story__grid, .page-index .section-head { grid-template-columns: 1fr; }
@@ -488,6 +519,65 @@ em { font-style: normal; }
 /* ==========================================================
    Gallery, Private hire, About
    ========================================================== */
+/* Home: selected Instagram photos and a clear follow invitation */
+.instagram { background: var(--white); }
+.instagram__layout { display: grid; grid-template-columns: .9fr 2.1fr; gap: clamp(24px, 4vw, 48px); align-items: start; }
+.instagram__intro { position: sticky; top: calc(var(--nav-h) + 32px); }
+.instagram .display { margin-bottom: 18px; }
+.instagram__note { max-width: 360px; margin-bottom: 18px; color: var(--charcoal-soft); }
+.instagram__handle { display: inline-flex; align-items: center; gap: 8px; color: var(--teal); font-size: 15px; font-weight: 500; text-decoration: none; }
+.instagram__handle .ig-icon { width: 20px; height: 20px; }
+.instagram__cta { display: flex; width: fit-content; gap: 12px; margin-top: 24px; }
+.instagram__photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 16px; margin: 0; padding: 0; list-style: none; }
+.instagram__post { display: block; color: var(--navy); text-decoration: none; }
+.instagram__post figure { margin: 0; }
+.instagram__image { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--grey-50); }
+.instagram__image img { width: 100%; height: 100%; object-fit: cover; object-position: center 65%; }
+.instagram__image--wine img { object-position: center 45%; }
+.instagram__badge { position: absolute; top: 12px; right: 12px; display: grid; place-items: center; width: 32px; height: 32px; background: var(--navy); color: var(--white); }
+.instagram__badge .ig-icon { width: 18px; height: 18px; }
+.instagram__post figcaption { display: flex; justify-content: space-between; gap: 12px; margin-top: 10px; font-size: 13px; }
+.instagram__handle:hover, .instagram__post:hover figcaption { text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 860px) {
+  .instagram__layout { grid-template-columns: 1fr; gap: 28px; }
+  .instagram__intro { position: static; }
+  .instagram__note { max-width: 560px; }
+}
+@media (max-width: 520px) {
+  .instagram__photos { grid-template-columns: 1fr; gap: 20px; }
+  .instagram__image { aspect-ratio: 2 / 1; }
+}
+
+/* Home: selected guest reviews with a verified Google rating */
+.reviews { background: var(--white); }
+.reviews__head { display: flex; justify-content: space-between; align-items: end; flex-wrap: wrap; gap: 24px 40px; margin-bottom: 28px; }
+.reviews__head .display { margin-bottom: 0; }
+.reviews__rating { display: inline-flex; align-items: center; gap: 18px; color: var(--navy); text-decoration: none; }
+.reviews__score { font-size: 40px; font-weight: 400; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.reviews__score small { font-size: 17px; color: var(--charcoal-soft); }
+.reviews__rating-detail { display: grid; gap: 4px; font-size: 13px; color: var(--charcoal-soft); }
+.reviews__stars { position: relative; display: inline-block; width: fit-content; font-size: 20px; line-height: 1.2; }
+.reviews__stars-empty { color: var(--grey); }
+.reviews__stars-fill { position: absolute; inset: 0 auto 0 0; width: 92%; overflow: hidden; white-space: nowrap; color: var(--teal); }
+.reviews__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.review-card { display: flex; flex-direction: column; margin: 0; padding: 24px; background: var(--grey-50); }
+.review-card blockquote { margin: 0 0 24px; }
+.review-card blockquote p { margin: 0; color: var(--navy); font-size: 20px; line-height: 1.5; text-wrap: pretty; }
+.review-card figcaption { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 6px 12px; margin-top: auto; }
+.review-card__author { color: var(--navy); font-size: 14px; font-weight: 500; }
+.review-card__stars { color: var(--teal); font-size: 15px; line-height: 1.2; }
+.review-card__source { grid-column: 1 / -1; color: var(--charcoal-soft); font-size: 12px; }
+.reviews__foot { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px 32px; margin-top: 28px; }
+.reviews__foot .btn { gap: 12px; padding: 0 20px; font-size: 12px; }
+.reviews__note { max-width: 390px; margin: 0; color: var(--charcoal-soft); font-size: 12px; }
+.reviews__note a { color: var(--teal); text-underline-offset: 3px; }
+@media (max-width: 860px) {
+  .reviews__grid { grid-template-columns: 1fr; gap: 12px; }
+  .review-card { padding: 20px; }
+  .review-card blockquote { margin-bottom: 16px; }
+  .review-card blockquote p { font-size: 18px; }
+}
+
 /* Home: gallery preview */
 .gpreview__head { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 16px 40px; margin-bottom: clamp(28px, 4vw, 44px); }
 .gpreview__head .display { margin-bottom: 0; }
