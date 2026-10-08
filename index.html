@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261008-pages5">
+  <link rel="stylesheet" href="styles.css?v=20261008-home2">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -83,14 +83,17 @@
     <!-- ============ HERO ============ -->
     <section class="hero hero--editorial" id="top">
       <div class="hero__media" aria-hidden="true">
-        <img src="assets/terrace-1672.webp" srcset="assets/terrace-960.webp 960w, assets/terrace-1672.webp 1672w" sizes="(orientation: portrait) 180vh, 100vw" alt="" fetchpriority="high" width="1672" height="941">
+        <picture>
+          <source media="(max-width: 860px)" srcset="assets/photos/sharing-plates-with-guests-640.webp 640w, assets/photos/sharing-plates-with-guests-1200.webp 1200w, assets/photos/sharing-plates-with-guests-1600.webp 1600w" sizes="100vw" width="1600" height="1066">
+          <img src="assets/terrace-1672.webp" srcset="assets/terrace-960.webp 960w, assets/terrace-1672.webp 1672w" sizes="(orientation: portrait) 180vh, 100vw" alt="" fetchpriority="high" width="1672" height="941">
+        </picture>
       </div>
       <div class="hero__content wrap">
         <p class="eyebrow reveal">St Katharine Docks<span class="hide-sm"> &nbsp;·&nbsp; London E1W</span></p>
         <h1 class="hero__title reveal">
-          Seafood.<br>Good company.<br><em>By the water.</em>
+          Seasonal seafood.<br><em>By the water.</em>
         </h1>
-        <p class="hero__lede reveal">A changing menu of fish and shellfish, served in our intimate dining room and on the dockside&nbsp;terrace.</p>
+        <p class="hero__lede reveal">Fish and shellfish, plates to share and good company on the dockside terrace or in our intimate dining room.</p>
         <div class="hero__ctas reveal">
           <a class="btn btn--gold" href="https://www.opentable.co.uk/r/the-melusine-reservations-london?restref=206064&lang=en-GB&ot_source=Restaurant%20website" target="_blank" rel="noopener">Book a table</a>
           <a class="btn btn--ghost" href="menu.html">View the menu</a>
@@ -108,98 +111,74 @@
     </aside>
     <div class="press-note wrap"><span>As reviewed by</span><strong>Grace Dent, <em>The Guardian</em></strong><a href="https://www.theguardian.com/food/2020/feb/28/the-melusine-london-e1-restaurant-review-grace-dent" target="_blank" rel="noopener noreferrer">Read the review →</a></div>
 
-    <!-- ============ PHILOSOPHY ============ -->
-    <section class="intro section">
-      <div class="wrap intro__grid">
-        <div class="intro__text">
-          <p class="eyebrow eyebrow--dark reveal">The idea</p>
-          <h2 class="display reveal">Led by the sea<br><em>and the seasons.</em></h2>
-          <p class="reveal">Our menu changes with the fish and shellfish available from our suppliers, and with the produce at its best that season. Many dishes are made for sharing.</p>
-          <ul class="facts reveal">
-            <li>An intimate dining room</li>
-            <li>Menus shaped by the seasons</li>
-            <li>Dockside terrace tables</li>
-          </ul>
-        </div>
-        <figure class="intro__img reveal">
-          <div class="intro__img__frame"><img src="assets/photos/crab-chicory-close-up-1200.webp" srcset="assets/photos/crab-chicory-close-up-640.webp 640w, assets/photos/crab-chicory-close-up-1200.webp 1200w, assets/photos/crab-chicory-close-up-1440.webp 1440w" sizes="(max-width: 860px) 100vw, 46vw" width="1440" height="1440" alt="White crab meat and a red, chunky crab mixture served in red chicory leaves, with shaved fennel and dots of yellow mayonnaise" loading="lazy" decoding="async"></div>
-          <figcaption>Crab in red chicory leaves.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- ============ MENU PREVIEW ============ -->
-    <section class="menu section" id="menu">
+    <!-- ============ FOOD & MENU PREVIEW ============ -->
+    <section class="menu section" id="menu" aria-labelledby="menu-preview-title">
       <div class="wrap">
         <div class="section-head">
           <div>
             <p class="eyebrow reveal">From our sample menu</p>
-            <h2 class="display display--light reveal">A taste of<br><em>what comes in.</em></h2>
+            <h2 class="display display--light reveal" id="menu-preview-title">A taste of the sea.</h2>
           </div>
-          <p class="section-head__note reveal">A few dishes to give you an idea. Ask your server what’s on today.</p>
+          <p class="section-head__note reveal">Our menu changes with the catch and the seasons. A few dishes to give you a taste.</p>
         </div>
 
-        <div class="catch-grid">
-          <article class="catch-card"><span class="catch-card__number">01 / RAW BAR</span><h3>Rock oysters</h3><p>Celine rock oysters from Brittany, trout roe and seaweed vinaigrette.</p><span class="catch-card__price">£13 / £24 / £46 <small>three / six / twelve</small></span></article>
-          <article class="catch-card"><span class="catch-card__number">02 / FROM THE GRILL</span><h3>Grilled octopus</h3><p>Fava, salty fingers and grumolo leaves.</p><span class="catch-card__price">£34</span></article>
-          <article class="catch-card"><span class="catch-card__number">03 / SMALL PLATES</span><h3>Scottish scallops</h3><p>Diver-caught scallops, sautéed spinach, spring onions and Jersey fromage blanc.</p><span class="catch-card__price">£22</span></article>
-        </div>
-
-        <div class="menu__links reveal">
-          <a class="btn btn--gold" href="menu.html#food">View the menu</a>
-          <a class="btn btn--ghost" href="menu.html#drinks">Drinks &amp; wine</a>
+        <div class="home-food__grid">
+          <figure class="home-food__photo reveal">
+            <img src="assets/photos/seafood-sharing-spread-1200.webp" srcset="assets/photos/seafood-sharing-spread-640.webp 640w, assets/photos/seafood-sharing-spread-1200.webp 1200w, assets/photos/seafood-sharing-spread-1283.webp 1283w" sizes="(max-width: 860px) 92vw, 45vw" width="1283" height="1283" alt="Seafood dishes and chips on a table with glasses of white wine" loading="lazy" decoding="async">
+            <figcaption>Seafood plates, made for sharing.</figcaption>
+          </figure>
+          <div class="menu__preview">
+            <div class="catch-grid">
+              <article class="catch-card">
+                <span class="catch-card__number">Raw bar</span>
+                <div class="catch-card__heading"><h3>Rock oysters</h3><span class="catch-card__price">£13 / £24 / £46 <small>three / six / twelve</small></span></div>
+                <p>Celine rock oysters from Brittany, trout roe and seaweed vinaigrette.</p>
+              </article>
+              <article class="catch-card">
+                <span class="catch-card__number">From the grill</span>
+                <div class="catch-card__heading"><h3>Grilled octopus</h3><span class="catch-card__price">£34</span></div>
+                <p>Fava, salty fingers and grumolo leaves.</p>
+              </article>
+              <article class="catch-card">
+                <span class="catch-card__number">Small plates</span>
+                <div class="catch-card__heading"><h3>Scottish scallops</h3><span class="catch-card__price">£22</span></div>
+                <p>Diver-caught scallops, sautéed spinach, spring onions and Jersey fromage blanc.</p>
+              </article>
+            </div>
+            <div class="menu__links reveal">
+              <a class="btn btn--gold" href="menu.html#food">View the menu</a>
+              <a class="btn btn--ghost" href="menu.html#drinks">Drinks &amp; wine</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ GALLERY PREVIEW ============ -->
-    <section class="gpreview section" aria-labelledby="gpreview-title">
-      <div class="wrap">
-        <div class="gpreview__head">
-          <div>
-            <p class="eyebrow eyebrow--dark reveal">Gallery</p>
-            <h2 class="display reveal" id="gpreview-title">At the table<br><em>and by the docks.</em></h2>
-          </div>
-          <a class="link-arrow reveal" href="gallery.html">View the gallery →</a>
-        </div>
-        <ul class="gpreview__grid reveal">
-          <li><img src="assets/photos/sharing-plates-with-guests-1200.webp" srcset="assets/photos/sharing-plates-with-guests-640.webp 640w, assets/photos/sharing-plates-with-guests-1200.webp 1200w, assets/photos/sharing-plates-with-guests-1600.webp 1600w" sizes="(max-width: 600px) 50vw, 25vw" width="1600" height="1066" alt="Guests reaching for plates of seafood, with glasses of white wine on the table" loading="lazy" decoding="async"></li>
-          <li><img src="assets/photos/dining-room-fish-mural-1200.webp" srcset="assets/photos/dining-room-fish-mural-640.webp 640w, assets/photos/dining-room-fish-mural-1200.webp 1200w, assets/photos/dining-room-fish-mural-1439.webp 1439w" sizes="(max-width: 600px) 50vw, 25vw" width="1439" height="959" alt="The dining room, with teal banquettes, mustard chairs and large fish prints on the walls" loading="lazy" decoding="async"></li>
-          <li><img src="assets/photos/blue-cocktail-overhead-1200.webp" srcset="assets/photos/blue-cocktail-overhead-640.webp 640w, assets/photos/blue-cocktail-overhead-1200.webp 1200w, assets/photos/blue-cocktail-overhead-1600.webp 1600w" sizes="(max-width: 600px) 50vw, 25vw" width="1600" height="1066" alt="A blue cocktail with a dried orange slice, seen from above on a table" loading="lazy" decoding="async"></li>
-          <li><img src="assets/photos/langoustines-wine-table-1200.webp" srcset="assets/photos/langoustines-wine-table-640.webp 640w, assets/photos/langoustines-wine-table-1200.webp 1200w, assets/photos/langoustines-wine-table-1600.webp 1600w" sizes="(max-width: 600px) 50vw, 25vw" width="1600" height="1066" alt="Langoustines with a lemon wedge on a grey plate, beside a glass of white wine and the menu" loading="lazy" decoding="async"></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ============ ABOUT PREVIEW ============ -->
-    <section class="story section" id="story">
+    <!-- ============ OUR PLACE & STORY ============ -->
+    <section class="story section" id="story" aria-labelledby="story-title">
       <div class="wrap story__grid">
         <figure class="story__img reveal">
-          <div class="story__img__frame"><img src="assets/photos/three-wines-terrace-900.webp" srcset="assets/photos/three-wines-terrace-640.webp 640w, assets/photos/three-wines-terrace-900.webp 900w" sizes="(max-width: 860px) 100vw, 46vw" width="900" height="900" alt="White, rosé and red wine on the terrace, with Ivory House behind" loading="lazy" decoding="async"></div>
+          <div class="story__img__frame"><img src="assets/photos/dining-room-fish-mural-1200.webp" srcset="assets/photos/dining-room-fish-mural-640.webp 640w, assets/photos/dining-room-fish-mural-1200.webp 1200w, assets/photos/dining-room-fish-mural-1439.webp 1439w" sizes="(max-width: 860px) 92vw, 45vw" width="1439" height="959" alt="The dining room, with teal banquettes, mustard chairs and large fish prints on the walls" loading="lazy" decoding="async"></div>
         </figure>
         <div class="story__text">
-          <p class="eyebrow eyebrow--dark reveal">About us</p>
-          <h2 class="display reveal">A place to<br><em>come together.</em></h2>
-          <p class="reveal">The Melusine opened in December 2019, led by chef <strong>Theodore Kyriakou</strong>, with a simple idea: to bring people together over exceptional seafood in a relaxed, personal setting.</p>
-          <a class="link-arrow reveal" href="about.html">Read our story →</a>
+          <p class="eyebrow eyebrow--dark reveal">Our story</p>
+          <h2 class="display reveal" id="story-title">A place to come together.</h2>
+          <p class="reveal">Since December 2019, chef <strong>Theodore Kyriakou</strong> has brought people together over seafood shaped by the sea and the seasons.</p>
+          <p class="reveal">Join us in our intimate dining room or on the dockside terrace, for a quick lunch or a long meal with friends.</p>
+          <div class="story__links reveal">
+            <a class="link-arrow" href="about.html">Read our story →</a>
+            <a class="link-arrow" href="gallery.html">View the gallery →</a>
+          </div>
         </div>
       </div>
     </section>
-
-    <aside class="ig-band" aria-label="Instagram">
-      <div class="wrap ig-band__inner reveal">
-        <p class="ig-band__text"><span class="ig-band__label">Follow us on Instagram</span><a class="ig-band__handle" href="https://www.instagram.com/themelusine_skd/" target="_blank" rel="noopener"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="ig-icon__dot"/></svg>@themelusine_skd</a></p>
-        <p class="ig-band__note">New dishes, the dining room and life on the docks.</p>
-        <a class="btn btn--navy" href="https://www.instagram.com/themelusine_skd/" target="_blank" rel="noopener">Follow on Instagram</a>
-      </div>
-    </aside>
 
     <!-- ============ PRIVATE HIRE PREVIEW ============ -->
     <section class="events section" id="events">
       <div class="wrap events__inner">
         <div>
           <p class="eyebrow eyebrow--dark reveal">Private hire</p>
-          <h2 class="display reveal">Your people.<br><em>Our table.</em></h2>
+          <h2 class="display reveal">Your people. Our table.</h2>
         </div>
         <div class="events__body reveal">
           <p>From team lunches to family celebrations and a big table of friends, we’ll help shape the occasion around you. <strong>The whole restaurant is also available for exclusive private hire.</strong></p>
@@ -216,7 +195,7 @@
       <div class="wrap visit__grid">
         <div class="visit__info">
           <p class="eyebrow reveal">Visit</p>
-          <h2 class="display display--light reveal">Find us<br><em>on the water.</em></h2>
+          <h2 class="display display--light reveal">Find us on the water.</h2>
 
           <dl class="visit__list reveal">
             <div>
