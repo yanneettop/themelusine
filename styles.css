@@ -157,7 +157,7 @@ em { font-style: normal; }
 .drawer__meta { color: var(--grey-soft); font-size: 14px; margin: 32px 0 0; }
 .drawer__meta a { color: var(--white); }
 
-/* ---------- Home hero: dockside desktop, food-led mobile ---------- */
+/* ---------- Home hero: dockside photograph ---------- */
 .hero {
   position: relative; min-height: 100vh; min-height: 100svh; padding-top: var(--nav-h);
   display: flex; flex-direction: column; justify-content: center;
@@ -746,9 +746,9 @@ html:not(.js) .nav__toggle { display: none !important; }
   .catch-card p { max-width: none; }
   .hero__caption { display: none; }
   .hero { justify-content: flex-start; }
-  .hero__media { position: relative; inset: auto; order: -1; flex: none; height: clamp(156px, 30svh, 320px); }
-  .hero__media img { object-position: 50% 70%; transform: none; will-change: auto; }
-  .hero__media::after { display: none; }
+  .hero__media { position: absolute; inset: 0; height: auto; }
+  .hero__media img { object-position: 66% 50%; transform: none; will-change: auto; }
+  .hero__media::after { display: block; background: linear-gradient(180deg, rgba(0, 32, 52, .58), rgba(0, 32, 52, .5) 25%, rgba(0, 32, 52, .8) 60%, rgba(0, 32, 52, .9)); }
   .hero__content { flex: 1; display: flex; flex-direction: column; justify-content: center; padding-top: 32px; padding-bottom: 32px; transform: none; }
   .hero__title { font-size: clamp(44px, 6.4vw, 56px); }
   .hero__foot { position: relative; margin-top: auto; padding-top: 18px; padding-bottom: 20px; }
