@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261011-events-hire">
+  <link rel="stylesheet" href="styles.css?v=20261011-enquiry-ux">
 </head>
 <body class="page-private-hire">
 
@@ -50,7 +50,7 @@
     </nav>
     <div>
       <a class="btn btn--gold" href="https://www.opentable.co.uk/r/the-melusine-reservations-london?restref=206064&amp;lang=en-GB&amp;ot_source=Restaurant%20website" target="_blank" rel="noopener">Book a table</a>
-      <p class="drawer__meta">Ivory House, St Katharine Docks, London E1W 1AT<br><a href="tel:02077022976">020 7702 2976</a></p>
+      <p class="drawer__meta">Ivory House, St Katharine Docks, London E1W 1AT<br><a href="tel:+442077022976">020 7702 2976</a></p>
       <a class="drawer__ig" href="https://www.instagram.com/themelusine_skd/" target="_blank" rel="noopener"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="ig-icon__dot"/></svg><span>@themelusine_skd</span></a>
     </div>
   </div>
@@ -64,7 +64,7 @@
         <h1 class="phero__title reveal">Your people.<br><em>Our table.</em></h1>
         <p class="phero__lede reveal">Your own seafood restaurant by the water. Gather for a private lunch or dinner in the intimate setting of St Katharine Docks.</p>
         <div class="hero__ctas reveal">
-          <a class="btn btn--gold" href="#enquire">Plan your event</a>
+          <a class="btn btn--gold" href="mailto:hello@themelusine.co.uk?subject=Private%20Hire%20Enquiry">Enquire by email</a>
           <a class="btn btn--ghost" href="https://www.themelusine.co.uk/_files/ugd/48a963_ed079c1bd8cb49fcbdaeea8fc7bf0bcf.pdf" target="_blank" rel="noopener" type="application/pdf">View private hire brochure</a>
         </div>
       </div>
@@ -92,14 +92,14 @@
             <h3>Exclusive hire</h3>
             <p>The whole restaurant, reserved for your guests for lunch or dinner. Your own private seafood restaurant by the water, for work, family or friends.</p>
             <p>From welcome drinks to a playlist for the occasion, the team will work with you on the details.</p>
-            <a class="link-arrow" href="#enquire">Discuss exclusive hire →</a>
+            <a class="link-arrow" href="mailto:hello@themelusine.co.uk?subject=Private%20Hire%20Enquiry">Discuss exclusive hire →</a>
           </article>
           <article>
             <p class="gather-options__number" aria-hidden="true">02</p>
             <h3>Group dining</h3>
             <p>A larger table and a seafood menu to share. Tell us your numbers, budget and dietary requirements, and we’ll tailor the menu around your group.</p>
             <p>For team lunches, clients, family celebrations or a gathering of friends.</p>
-            <a class="link-arrow" href="#enquire">Plan a group meal →</a>
+            <a class="link-arrow" href="mailto:hello@themelusine.co.uk?subject=Group%20Dining%20Enquiry">Plan a group meal →</a>
           </article>
         </div>
       </div>
@@ -130,7 +130,7 @@
           <div class="hire-pricing" aria-labelledby="pricing-title">
             <h3 id="pricing-title">Planning your budget</h3>
             <p>Private hire is subject to a minimum spend. Contact the team to discuss the requirement for your preferred date and occasion.</p>
-            <a class="link-arrow" href="#enquire">Discuss your arrangements →</a>
+            <a class="link-arrow" href="mailto:hello@themelusine.co.uk?subject=Private%20Hire%20Enquiry">Discuss your arrangements →</a>
           </div>
         </div>
       </div>
@@ -142,12 +142,18 @@
           <p class="eyebrow eyebrow--dark reveal">Enquire</p>
           <h2 class="display reveal">Tell us what<br><em>you have in mind.</em></h2>
           <p class="reveal">For a private gathering or group meal, email or call us with your preferred date, approximate guest numbers and what you have in mind.</p>
-          <p class="enquire__direct reveal">Email <a href="mailto:hello@themelusine.co.uk">hello@themelusine.co.uk</a> or call <a class="nowrap" href="tel:02077022976">020 7702 2976</a>.</p>
           <a class="link-arrow reveal" href="https://www.themelusine.co.uk/_files/ugd/48a963_ed079c1bd8cb49fcbdaeea8fc7bf0bcf.pdf" target="_blank" rel="noopener" type="application/pdf">View private hire brochure →</a>
         </div>
 
-        <form class="eform" id="enquiry-form" method="post" data-endpoint="" aria-describedby="enquiry-note" novalidate>
-          <p class="eform__note" id="enquiry-note">Online enquiries are not available yet. Please email <a href="mailto:hello@themelusine.co.uk">hello@themelusine.co.uk</a> or call <a href="tel:02077022976">020 7702 2976</a>. Nothing entered here will be sent.</p>
+        <div class="enquiry-contact" id="enquiry-contact" aria-label="Contact the restaurant">
+          <a class="btn btn--navy" href="mailto:hello@themelusine.co.uk?subject=Private%20Hire%20Enquiry">Email your enquiry</a>
+          <p>hello@themelusine.co.uk</p>
+          <a class="btn btn--line" href="tel:+442077022976">Call 020 7702 2976</a>
+        </div>
+
+        <!-- Retained for future activation after a delivery endpoint is configured and tested. -->
+        <form class="eform" id="enquiry-form" method="post" data-endpoint="" aria-describedby="enquiry-note" hidden inert novalidate>
+          <p class="eform__note" id="enquiry-note">Online enquiries are not available yet. Please email <a href="mailto:hello@themelusine.co.uk">hello@themelusine.co.uk</a> or call <a href="tel:+442077022976">020 7702 2976</a>. Nothing entered here will be sent.</p>
           <div class="eform__row">
             <label for="ef-name">Name</label>
             <input id="ef-name" name="Name" type="text" autocomplete="name" maxlength="120" required aria-describedby="ef-name-err">
@@ -213,7 +219,7 @@
       </nav>
       <address class="footer__contact">
         <span>Ivory House, East Smithfield, St Katharine Docks, London E1W 1AT</span>
-        <span><a href="tel:02077022976">020 7702 2976</a> · <a href="mailto:hello@themelusine.co.uk">hello@themelusine.co.uk</a></span>
+        <span><a href="tel:+442077022976">020 7702 2976</a> · <a href="mailto:hello@themelusine.co.uk">hello@themelusine.co.uk</a></span>
         <a class="footer__visit" href="index.html#visit">Opening hours &amp; directions →</a>
       </address>
       <nav class="footer__social" aria-label="Social">
@@ -230,6 +236,6 @@
   </footer>
 
   <script src="analytics.js?v=20261010-refinement" defer></script>
-  <script src="script.js?v=20261010-refinement" defer></script>
+  <script src="script.js?v=20261011-enquiry-ux" defer></script>
 </body>
 </html>

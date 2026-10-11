@@ -998,6 +998,10 @@ html:not(.js) .nav__toggle { display: none !important; }
 .hire-pricing p { color: var(--charcoal-soft); max-width: 45ch; margin-bottom: 10px; }
 .page-private-hire .enquire__grid { gap: var(--occasion-gap); }
 .page-private-hire .eform { background: var(--white); padding: clamp(20px, 2.8vw, 32px); }
+.page-private-hire .eform[hidden], .page-private-hire .enquiry-contact[hidden] { display: none; }
+.page-private-hire .enquiry-contact { display: grid; justify-items: start; gap: 16px; padding: clamp(20px, 2.8vw, 32px); background: var(--white); border-top: 2px solid var(--gold); }
+.page-private-hire .enquiry-contact p { margin: -6px 0 8px; color: var(--charcoal-soft); overflow-wrap: anywhere; }
+.page-private-hire .enquiry-contact .btn { width: 100%; padding: 0 14px; font-size: 12px; }
 .page-private-hire .eform__pair { gap: 14px; }
 .page-private-hire .eform label { font-size: 11px; letter-spacing: .08em; }
 .page-private-hire .eform__note a { text-underline-offset: 3px; }

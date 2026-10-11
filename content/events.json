@@ -11,6 +11,7 @@
       "featured": true,
       "page": {
         "label": "Christmas gatherings",
+        "href": "mailto:hello@themelusine.co.uk?subject=Christmas%20Enquiry",
         "photo": {
           "src": "assets/photos/sharing-plates-with-guests-1200.webp",
           "srcset": "assets/photos/sharing-plates-with-guests-640.webp 640w, assets/photos/sharing-plates-with-guests-1200.webp 1200w, assets/photos/sharing-plates-with-guests-1600.webp 1600w",
@@ -38,6 +39,7 @@
       "href": "private-hire.html#enquire",
       "page": {
         "title": "Oyster events.",
+        "href": "mailto:hello@themelusine.co.uk?subject=Oyster%20Event%20Enquiry",
         "intro": "For the latest on oyster events at The Melusine, speak to the team.",
         "paragraphs": [
           "Dates, menus and ticket details will be shared here once confirmed."
@@ -55,6 +57,7 @@
       "href": "private-hire.html#enquire",
       "page": {
         "title": "Collaborations & special events.",
+        "href": "mailto:hello@themelusine.co.uk?subject=Collaboration%20Enquiry",
         "intro": "A space for collaborations, guest experiences and occasions led by the restaurant.",
         "paragraphs": [
           "Confirmed plans will be shared here. Have an idea for an occasion together? We’d be pleased to hear from you."

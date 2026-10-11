@@ -195,6 +195,10 @@
       el.addEventListener('input', () => { if (el.hasAttribute('aria-invalid')) valid(el); });
     });
     if (endpoint) {
+      form.hidden = false;
+      form.inert = false;
+      const contact = document.getElementById('enquiry-contact');
+      if (contact) contact.hidden = true;
       button.disabled = false;
       button.textContent = 'Send enquiry';
       note.textContent = 'Share a few details and we’ll get back to you. A preferred date is an enquiry, not a confirmed booking.';

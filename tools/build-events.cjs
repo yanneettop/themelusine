@@ -14,6 +14,10 @@ for (const item of data.items) {
   if (!match || !fs.existsSync(path.join(root, match[1]))) throw new Error(`Invalid internal route for ${item.id}`);
   if (match[2] && !fs.readFileSync(path.join(root, match[1]), 'utf8').includes(`id="${match[2].slice(1)}"`)) throw new Error(`Missing fragment for ${item.id}`);
   if (!item.page || !['title', 'intro', 'cta'].every(key => typeof item.page[key] === 'string' && item.page[key].trim()) || !Array.isArray(item.page.paragraphs) || !item.page.paragraphs.every(text => typeof text === 'string' && text.trim())) throw new Error(`Missing page content for ${item.id}`);
+  if (item.page.href) {
+    const enquiry = new URL(item.page.href);
+    if (enquiry.protocol !== 'mailto:' || enquiry.pathname !== 'hello@themelusine.co.uk' || !enquiry.searchParams.get('subject')?.trim()) throw new Error(`Invalid enquiry email for ${item.id}`);
+  }
   if (item.page.photo) {
     const photo = item.page.photo;
     const sources = [photo.src, ...String(photo.srcset).split(',').map(source => source.trim().split(/\s+/)[0])];
@@ -27,7 +31,7 @@ function pageArticle(item) {
               <h2 class="display" id="${escape(item.id)}-title">${escape(page.title)}</h2>
               <p class="event-copy__intro">${escape(page.intro)}</p>
 ${page.paragraphs.map(text => `              <p>${escape(text)}</p>`).join('\n')}
-              <div class="detail-links"><a class="${item.featured ? 'btn btn--navy' : 'link-arrow'}" href="${escape(item.href)}">${escape(page.cta)}</a>${page.secondary ? `<a class="link-arrow" href="private-hire.html">${escape(page.secondary)}</a>` : ''}</div>
+              <div class="detail-links"><a class="${item.featured ? 'btn btn--navy' : 'link-arrow'}" href="${escape(page.href || item.href)}">${escape(page.cta)}</a>${page.secondary ? `<a class="link-arrow" href="private-hire.html">${escape(page.secondary)}</a>` : ''}</div>
             </div>`;
   return `          <article class="seasonal-card ${item.featured ? 'event-feature' : 'event-note'}" id="${escape(item.id)}" aria-labelledby="${escape(item.id)}-title">
 ${text}${page.photo ? `
