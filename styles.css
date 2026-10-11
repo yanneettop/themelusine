@@ -956,6 +956,61 @@ html:not(.js) .nav__toggle { display: none !important; }
   .page-index .story__links { gap: 10px 20px; }
 }
 
+/* Menu: a shorter category strip and restrained, aligned typesetting. */
+.page-menu { --tabs-h: 50px; }
+.page-menu .phero__title { font-size: clamp(52px, 6.8vw, 94px); }
+.page-menu .phero__inner { padding-bottom: 40px; }
+.page-menu .phero__lede { margin-bottom: 0; max-width: 54ch; }
+.page-menu .mtabs { background: var(--white); backdrop-filter: none; -webkit-backdrop-filter: none; }
+.page-menu .mtabs__track { gap: 8px; scrollbar-width: thin; scrollbar-color: var(--gold) var(--grey-50); }
+.page-menu .mtabs__track::-webkit-scrollbar { display: block; height: 3px; }
+.page-menu .mtabs__track::-webkit-scrollbar-thumb { background: var(--gold); }
+.page-menu .mtabs a { padding: 0 14px; font-size: 13px; letter-spacing: .06em; }
+.page-menu .mtabs a.is-active { font-weight: 500; }
+.page-menu .mpage { padding: 24px 0 clamp(48px, 5.5vw, 80px); }
+.page-menu .mgroup__head { margin-top: 24px; margin-bottom: 20px; }
+.page-menu .mgroup__head h2 { font-size: clamp(38px, 4.5vw, 58px); }
+.page-menu .mgroup + .mgroup { --mg-pad: 40px; margin-top: 56px; border-top-width: 1px; }
+.page-menu .msec { --msec-pad: clamp(36px, 4.5vw, 56px); }
+.page-menu .msec__head h3 { font-size: clamp(28px, 3vw, 38px); line-height: 1.15; }
+.page-menu .menu-index { display: flex; flex-wrap: wrap; gap: 0 24px; margin: 0 0 20px; }
+.page-menu .menu-index a { display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; color: var(--teal); text-decoration: none; }
+.page-menu .menu-index a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.page-menu .mlist { column-gap: clamp(28px, 4vw, 56px); }
+.page-menu .item { padding: 16px 0; border-bottom: 0; }
+.page-menu .item__row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: baseline; }
+.page-menu .item__dots { display: none; }
+.page-menu .item h4 { min-width: 0; line-height: 1.4; }
+.page-menu .item__price { font-size: 16px; font-weight: 400; text-align: right; }
+.page-menu .item p { font-size: 15px; line-height: 1.6; }
+.page-menu .item p.item__origin { font-size: 12px; letter-spacing: .08em; }
+.page-menu .msub { margin-top: 28px; }
+.page-menu .msub__title { letter-spacing: .12em; line-height: 1.5; }
+.page-menu .msub__title::after { content: none; }
+.page-menu .addons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px 24px; }
+.page-menu .addons li { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 6px 0; border: 0; border-radius: 0; }
+.page-menu .addons span { margin: 0; flex: none; }
+.page-menu .mtable { column-gap: clamp(28px, 4vw, 56px); row-gap: 28px; }
+.page-menu .mtable__head, .page-menu .mtable__row { grid-template-columns: minmax(0, 1fr) 52px 52px; column-gap: 8px; }
+.page-menu .mtable__row { border-bottom: 0; padding: 9px 0; }
+.page-menu .mtable__row p { line-height: 1.5; }
+.page-menu .mtable__row p em { display: block; margin: 3px 0 0; letter-spacing: .08em; }
+.page-menu .mtable__row span { font-weight: 400; }
+.page-menu .mnotes { margin-top: 36px; }
+.page-menu .mnotes .link-arrow { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 0; }
+.page-menu .mcta { padding: clamp(48px, 5.5vw, 80px) 0; }
+@media (min-width: 700px) and (max-width: 860px) {
+  .page-menu .mlist, .page-menu .mtable { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 699px) {
+  .page-menu .mlist, .page-menu .mtable, .page-menu .addons { grid-template-columns: 1fr; }
+  .page-menu .mtabs__track { padding-left: 8px; padding-right: 8px; gap: 0; }
+  .page-menu .mtabs a { padding: 0 12px; font-size: 12px; }
+  .page-menu .menu-index { gap: 0 20px; }
+  .page-menu .item__row { gap: 12px; }
+  .page-menu .mtable__head, .page-menu .mtable__row { grid-template-columns: minmax(0, 1fr) 48px 48px; }
+}
+
 /* Our Story: a compact gallery using the existing photo viewer. */
 .page-about .story-gallery { padding: clamp(48px, 5.5vw, 80px) 0; }
 .page-about .story-gallery .display { font-size: clamp(32px, 3.6vw, 48px); line-height: 1.12; }

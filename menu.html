@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261010-refinement">
+  <link rel="stylesheet" href="styles.css?v=20261011-menu-refinement">
 </head>
 <body class="page-menu">
 
@@ -63,31 +63,16 @@
         <p class="eyebrow reveal">Sample menu</p>
         <h1 class="phero__title reveal">The menu</h1>
         <p class="phero__lede reveal">Our menu changes with the seafood available from our suppliers and the produce at its best that season. Many dishes are made for sharing. Order a few and pass them round the table.</p>
-        <div class="phero__switch reveal">
-          <a href="#food">Food</a>
-          <a href="#drinks">Drinks</a>
-        </div>
       </div>
     </section>
 
     <nav class="mtabs" aria-label="Menu sections">
       <div class="mtabs__track">
-        <a class="mtabs__group" href="#food">Food</a>
-        <a href="#aperitif">Aperitif</a>
-        <a href="#small-things">Bread & small things</a>
-        <a href="#raw-bar">Raw bar</a>
-        <a href="#small-plates">Small plates</a>
-        <a href="#large-plates">Large plates</a>
-        <a href="#sides">For the table</a>
-        <span class="mtabs__sep" aria-hidden="true"></span>
-        <a class="mtabs__group" href="#drinks">Drinks</a>
-        <a href="#cocktails">Cocktails</a>
-        <a href="#by-the-glass">By the glass</a>
-        <a href="#sparkling">Sparkling</a>
-        <a href="#white">White</a>
-        <a href="#rose-red">Rosé & red</a>
-        <a href="#spirits">Spirits</a>
-        <a href="#beer-softs">Beer & softs</a>
+        <a href="#food" data-sections="food aperitif small-things raw-bar small-plates large-plates sides">Food</a>
+        <a href="#cocktails" data-sections="drinks cocktails">Cocktails</a>
+        <a href="#by-the-glass" data-sections="by-the-glass sparkling white rose-red">Wine</a>
+        <a href="#spirits" data-sections="spirits">Spirits</a>
+        <a href="#beer-softs" data-sections="beer-softs">Beer &amp; softs</a>
       </div>
     </nav>
 
@@ -99,6 +84,14 @@
             <p class="eyebrow eyebrow--dark">Sample menu</p>
             <h2 id="food-title">Food</h2>
           </header>
+          <nav class="menu-index" aria-label="Food categories">
+            <a href="#aperitif" data-group="#food">Aperitif</a>
+            <a href="#small-things" data-group="#food">Bread &amp; small things</a>
+            <a href="#raw-bar" data-group="#food">Raw bar</a>
+            <a href="#small-plates" data-group="#food">Small plates</a>
+            <a href="#large-plates" data-group="#food">Large plates</a>
+            <a href="#sides" data-group="#food">For the table</a>
+          </nav>
           <div class="mphotos">
             <figure><img src="assets/photos/seafood-sharing-spread-1200.webp" srcset="assets/photos/seafood-sharing-spread-640.webp 640w, assets/photos/seafood-sharing-spread-1200.webp 1200w, assets/photos/seafood-sharing-spread-1283.webp 1283w" sizes="(max-width: 600px) 100vw, 50vw" width="1283" height="1283" alt="A table of shared dishes, including grilled octopus, chips, salads and white wine" loading="lazy" decoding="async"></figure>
             <figure><img src="assets/photos/langoustines-wine-table-1200.webp" srcset="assets/photos/langoustines-wine-table-640.webp 640w, assets/photos/langoustines-wine-table-1200.webp 1200w, assets/photos/langoustines-wine-table-1600.webp 1600w" sizes="(max-width: 600px) 100vw, 50vw" width="1600" height="1066" alt="Langoustines with a lemon wedge on a grey plate, beside a glass of white wine and the menu" loading="lazy" decoding="async"></figure>
@@ -274,6 +267,12 @@
           <header class="msec__head">
             <h3>Wine by the glass & carafe</h3>
           </header>
+          <nav class="menu-index" aria-label="Wine categories">
+            <a href="#by-the-glass" data-group="#by-the-glass">By the glass</a>
+            <a href="#sparkling" data-group="#by-the-glass">Sparkling</a>
+            <a href="#white" data-group="#by-the-glass">White</a>
+            <a href="#rose-red" data-group="#by-the-glass">Rosé &amp; red</a>
+          </nav>
           <div class="mtable">
             <div class="mtable__group">
               <div class="mtable__head"><h4>Sparkling</h4><span>125ml</span><span></span></div>
@@ -519,6 +518,6 @@
   </footer>
 
   <script src="analytics.js?v=20261010-refinement" defer></script>
-  <script src="script.js?v=20261010-refinement" defer></script>
+  <script src="script.js?v=20261011-menu-refinement" defer></script>
 </body>
 </html>

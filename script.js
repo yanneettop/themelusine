@@ -75,24 +75,43 @@
     setInterval(updateStatus, 60 * 1000);
   }
 
-  // Menu page: highlight the tab for the section in view (Food / Drinks groups included,
-  // so the tab bar follows straight away when someone jumps to #drinks)
+  // Menu page: keep the main category current as its subcategories are browsed.
   const tabs = document.querySelectorAll('.mtabs a');
-  if (tabs.length && 'IntersectionObserver' in window) {
-    const byId = new Map([...tabs].map((a) => [a.getAttribute('href').slice(1), a]));
-    const setActive = (id) => {
-      tabs.forEach((a) => a.classList.remove('is-active'));
-      const tab = byId.get(id);
-      if (!tab) return;
-      tab.classList.add('is-active');
-      const track = tab.parentElement;
-      // Instant on purpose: a smooth scroll here can interrupt the page's own jump to an anchor
-      track.scrollLeft = tab.offsetLeft - track.clientWidth / 2 + tab.clientWidth / 2;
+  if (tabs.length && doc.querySelector('.page-menu')) {
+    const categories = new Map();
+    tabs.forEach(tab => (tab.dataset.sections || '').split(' ').forEach(id => categories.set(id, tab)));
+    const sections = [...document.querySelectorAll('.mgroup, .msec')].filter(section => categories.has(section.id));
+    const bar = document.querySelector('.mtabs');
+    const track = document.querySelector('.mtabs__track');
+    let active;
+    let scheduled = false;
+    const updateCategory = () => {
+      scheduled = false;
+      const boundary = bar.getBoundingClientRect().bottom + 28;
+      let current = tabs[0];
+      sections.forEach(section => {
+        const heading = section.querySelector(':scope > header') || section;
+        if (heading.getBoundingClientRect().top <= boundary) current = categories.get(section.id);
+      });
+      if (current === active) return;
+      active = current;
+      tabs.forEach(tab => {
+        tab.classList.toggle('is-active', tab === active);
+        if (tab === active) tab.setAttribute('aria-current', 'location');
+        else tab.removeAttribute('aria-current');
+      });
+      const bounds = track.getBoundingClientRect();
+      const selected = active.getBoundingClientRect();
+      if (selected.left < bounds.left + 12) track.scrollLeft += selected.left - bounds.left - 12;
+      else if (selected.right > bounds.right - 12) track.scrollLeft += selected.right - bounds.right + 12;
     };
-    const spy = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => { if (entry.isIntersecting) setActive(entry.target.id); });
-    }, { rootMargin: '-35% 0px -60% 0px' });
-    byId.forEach((_, id) => { const sec = document.getElementById(id); if (sec) spy.observe(sec); });
+    const scheduleCategory = () => { if (!scheduled) { scheduled = true; requestAnimationFrame(updateCategory); } };
+    window.addEventListener('scroll', scheduleCategory, { passive: true });
+    window.addEventListener('resize', scheduleCategory);
+    window.addEventListener('hashchange', scheduleCategory);
+    window.addEventListener('load', scheduleCategory);
+    document.fonts?.ready.then(scheduleCategory);
+    updateCategory();
   }
 
   // Visit: the address card is always shown; the map loads only on request.
