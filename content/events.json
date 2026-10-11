@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "id": "christmas",
+      "label": "Seasonal enquiries",
+      "title": "Christmas by the docks.",
+      "description": "Planning a Christmas gathering with colleagues, family or friends? Talk to us about your occasion.",
+      "detail": "Menus, dates and arrangements are confirmed with the team when you enquire.",
+      "cta": "Enquire about Christmas",
+      "href": "private-hire.html#enquire",
+      "featured": true
+    },
+    {
+      "id": "oysters",
+      "label": "Oyster events",
+      "title": "Oysters & bubbles.",
+      "description": "For enquiries about oyster events, speak to the team. Confirmed event details will be shared here.",
+      "detail": "Please contact us for current details.",
+      "cta": "Ask about oyster events",
+      "href": "private-hire.html#enquire"
+    },
+    {
+      "id": "collaborations",
+      "label": "Collaborations",
+      "title": "Something shared.",
+      "description": "Have an idea for a collaboration at The Melusine? We’d be pleased to hear from you.",
+      "detail": "Confirmed collaborations will be listed here as details become available.",
+      "cta": "Discuss a collaboration",
+      "href": "private-hire.html#enquire"
+    }
+  ]
+}

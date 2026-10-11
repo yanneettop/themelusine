@@ -16,6 +16,7 @@
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     drawer.hidden = !open;
+    document.querySelectorAll('main, footer, .skip').forEach((el) => { el.inert = open; });
     nav.classList.toggle('is-solid', open || window.scrollY > 40);
     doc.style.overflow = open ? 'hidden' : '';
     if (open) drawer.querySelector('a').focus();
@@ -58,8 +59,7 @@
     let msg;
     if (mins >= open && mins < close) {
       status.classList.add('is-open');
-      const hh = mins >= 15 * 60 && mins < 18 * 60;
-      msg = hh ? 'Open now · Happy hour until 18:00' : 'Open now · until ' + fmt(close);
+      msg = 'Open now · until ' + fmt(close);
     } else {
       status.classList.remove('is-open');
       msg = mins < open ? 'Opens today at ' + fmt(open) : 'Closed now · opens tomorrow at 12:00';
@@ -163,59 +163,91 @@
     });
   }
 
-  // Private hire enquiry: no sending service exists, so we prepare an email
-  // in the visitor's own email app instead of pretending to send.
+  // Enable only after a same-origin delivery endpoint has been deployed and tested.
   const form = document.getElementById('enquiry-form');
   if (form) {
-    const ready = document.getElementById('enquiry-ready');
-    const mailto = document.getElementById('enquiry-mailto');
-    const fields = {
-      name: form.querySelector('#ef-name'),
-      email: form.querySelector('#ef-email'),
-      date: form.querySelector('#ef-date'),
-      guests: form.querySelector('#ef-guests'),
-      message: form.querySelector('#ef-message'),
+    const feedback = document.getElementById('enquiry-feedback');
+    const button = form.querySelector('[type="submit"]');
+    const note = document.getElementById('enquiry-note');
+    const fields = ['name', 'email', 'date', 'guests', 'message'].map((key) => form.querySelector('#ef-' + key));
+    const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+    fields[2].min = today;
+    let endpoint;
+    try {
+      if (form.dataset.endpoint) {
+        const url = new URL(form.dataset.endpoint, location.href);
+        if (url.origin === location.origin && (url.protocol === 'https:' || url.hostname === '127.0.0.1' || url.hostname === 'localhost')) endpoint = url.href;
+      }
+    } catch { /* Keep the form unavailable if configuration is invalid. */ }
+    const showFeedback = (message) => {
+      feedback.textContent = message;
+      feedback.hidden = false;
+      feedback.focus();
     };
-    const checks = [
-      [fields.name, (v) => v.trim().length > 0],
-      [fields.email, (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim())],
-      [fields.guests, (v) => v === '' || (/^\d+$/.test(v) && Number(v) >= 1)],
-      [fields.message, (v) => v.trim().length > 0],
-    ];
-    const validate = (el, ok) => {
-      const err = document.getElementById(el.id + '-err');
+    const valid = (el) => {
+      const ok = el.checkValidity() && (!el.required || el.value.trim().length > 0);
       el.setAttribute('aria-invalid', String(!ok));
-      if (err) err.hidden = ok;
+      document.getElementById(el.id + '-err').hidden = ok;
       return ok;
     };
-    checks.forEach(([el, test]) => el.addEventListener('blur', () => {
-      if (el.getAttribute('aria-invalid') !== null || el.value) validate(el, test(el.value));
-    }));
-    form.addEventListener('input', () => { ready.hidden = true; });
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const results = checks.map(([el, test]) => validate(el, test(el.value)));
-      const firstBad = checks[results.indexOf(false)];
-      if (firstBad) { firstBad[0].focus(); return; }
-      let when = 'Flexible';
-      if (fields.date.value) {
-        const d = new Date(fields.date.value + 'T12:00:00');
-        when = d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+    fields.forEach((el) => {
+      el.addEventListener('blur', () => { if (el.value || el.hasAttribute('aria-invalid')) valid(el); });
+      el.addEventListener('input', () => { if (el.hasAttribute('aria-invalid')) valid(el); });
+    });
+    if (endpoint) {
+      button.disabled = false;
+      button.textContent = 'Send enquiry';
+      note.textContent = 'Share a few details and we’ll get back to you. A preferred date is an enquiry, not a confirmed booking.';
+      document.querySelector('.enquire__intro > p:not(.eyebrow)').textContent = 'Tell us about your occasion and we’ll get back to you. No date yet? Leave it blank.';
+    }
+    let sending = false;
+    let requestId = null;
+    form.addEventListener('input', () => { requestId = null; });
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!endpoint) { showFeedback('Online enquiries are not available yet. Please email or call us. Nothing has been sent.'); return; }
+      if (sending) return;
+      const results = fields.map(valid);
+      if (results.includes(false)) {
+        showFeedback('Please check the highlighted fields. Nothing has been sent.');
+        fields[results.indexOf(false)].focus();
+        return;
       }
-      const body = [
-        'Name: ' + fields.name.value.trim(),
-        'Email: ' + fields.email.value.trim(),
-        'Preferred date: ' + when,
-        'Number of guests: ' + (fields.guests.value || 'Not sure yet'),
-        '',
-        fields.message.value.trim(),
-      ].join('\n');
-      mailto.href = 'mailto:hello@themelusine.co.uk?subject=' + encodeURIComponent('Private hire enquiry: ' + fields.name.value.trim()) +
-        '&body=' + encodeURIComponent(body);
-      ready.hidden = false;
-      ready.focus();
+      if (form.querySelector('#ef-website').value) {
+        showFeedback('Your enquiry could not be sent. Please email or call us.');
+        return;
+      }
+      requestId = requestId || crypto.randomUUID();
+      const payload = { requestId, name: fields[0].value.trim(), email: fields[1].value.trim(), date: fields[2].value, guests: fields[3].value ? Number(fields[3].value) : null, message: fields[4].value.trim(), website: '' };
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 15000);
+      sending = true;
+      button.disabled = true;
+      button.textContent = 'Sending…';
+      form.setAttribute('aria-busy', 'true');
+      fields.forEach((el) => { el.readOnly = true; });
+      try {
+        const response = await fetch(endpoint, { method: 'POST', credentials: 'same-origin', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload), signal: controller.signal });
+        const result = await response.json();
+        if (!response.ok || result.accepted !== true) throw new Error('Delivery was not confirmed');
+        form.reset();
+        requestId = null;
+        fields.forEach((el) => { el.removeAttribute('aria-invalid'); });
+        showFeedback('Thank you. Your enquiry has been received by our team. This does not confirm a booking.');
+        window.MelusineTracking?.track('private_hire_enquiry_submit', { location: 'enquiry' });
+      } catch {
+        showFeedback('We could not confirm that your enquiry was received. Your details are still here. Please try again, or email or call us.');
+      } finally {
+        clearTimeout(timeout);
+        sending = false;
+        button.disabled = false;
+        button.textContent = 'Send enquiry';
+        form.removeAttribute('aria-busy');
+        fields.forEach((el) => { el.readOnly = false; });
+      }
     });
   }
+
 
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();

@@ -788,3 +788,75 @@ html:not(.js) .nav__toggle { display: none !important; }
   .nav__book .long { display: none; }
   .nav__book .short { display: inline; }
 }
+
+/* Client feedback, October 2026: retain the identity and prioritise enquiries. */
+.hire { background: var(--navy); color: var(--white); }
+.hire__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
+.hire__photo { margin: 0; }
+.hire__photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.hire__body > p:not(.eyebrow) { max-width: 480px; color: var(--grey); }
+.hire__body .display { margin-bottom: 24px; }
+.hire__ctas { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; margin-top: 26px; }
+.hire :focus-visible, .story :focus-visible { outline-color: var(--gold); }
+.seasonal { background: var(--grey-50); }
+.seasonal .section-head { align-items: center; gap: 24px; margin-bottom: 32px; }
+.seasonal .section-head .display { margin-bottom: 0; }
+.seasonal .section-head > .link-arrow { justify-self: end; }
+.seasonal .section-head__note { margin: 0; color: var(--charcoal-soft); }
+.seasonal__grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 24px; }
+.seasonal-card { display: flex; flex-direction: column; align-items: flex-start; padding: 28px 24px; border-top: 1px solid var(--line-dark); }
+.seasonal-card--featured { background: var(--grey); border-top-color: var(--gold); }
+.seasonal-card__label { margin-bottom: 14px; color: var(--teal); font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; }
+.seasonal-card h3 { margin-bottom: 16px; font-size: 27px; line-height: 1.2; font-weight: 300; color: var(--navy); }
+.seasonal-card p:not(.seasonal-card__label) { color: var(--charcoal-soft); font-size: 15px; }
+.seasonal-card .seasonal-card__detail { font-size: 13px; }
+.seasonal-card > a { margin-top: auto; }
+.seasonal-card .btn { padding: 0 16px; font-size: 11px; letter-spacing: .1em; }
+.seasonal-card .link-arrow { font-size: 11px; letter-spacing: .08em; }
+.events-contact { display: grid; grid-template-columns: 1.3fr 1fr; gap: 36px; align-items: center; }
+.events-contact .display { margin-bottom: 20px; }
+.events-contact > div > p { margin-top: 18px; }
+.story .press-note { margin-top: 32px; border-top: 1px solid var(--line-light); border-bottom: 0; }
+.story .press-note :is(span, strong, a) { color: var(--grey); }
+.page-index .instagram { padding: clamp(32px, 4vw, 56px) 0; border-top: 1px solid var(--line-dark); }
+.instagram__layout { grid-template-columns: 1.2fr 1fr; align-items: center; }
+.instagram__intro { position: static; }
+.instagram__photos { gap: 14px; }
+.instagram__image { aspect-ratio: 1; }
+.instagram__post figcaption { font-size: 11px; }
+.instagram__note { font-size: 15px; max-width: 320px; }
+.eform__note a { color: var(--teal); }
+.eform__trap { position: absolute; width: 1px; height: 1px; clip-path: inset(50%); overflow: hidden; }
+.eform__feedback { margin: 0; padding: 16px; color: var(--navy); background: var(--white); border-left: 2px solid var(--gold); }
+.eform__feedback[hidden] { display: none; }
+.btn:disabled { background: var(--grey); color: var(--charcoal); cursor: not-allowed; translate: none; box-shadow: none; }
+.drawer nav a { min-height: 44px; padding: 4px 0; }
+.drawer nav .drawer__drinks { font-size: 18px; color: var(--grey); margin-top: 8px; }
+.nav__links a { min-height: 44px; display: flex; align-items: center; }
+.btn--sm, .nav__book { --h: 44px; }
+@media (max-width: 1100px) and (min-width: 981px) {
+  .nav__links, .nav__end { gap: 18px; }
+  .nav__links a { font-size: 12px; letter-spacing: .08em; }
+}
+@media (max-width: 980px) {
+  .nav__book .long { display: inline; }
+  .nav__book .short { display: none; }
+  .nav__book { padding: 0 12px; font-size: 10px; letter-spacing: .06em; }
+}
+@media (max-width: 860px) {
+  .hire__grid, .seasonal__grid, .events-contact, .instagram__layout { grid-template-columns: 1fr; }
+  .hire__body { order: -1; }
+  .seasonal .section-head { grid-template-columns: 1fr; }
+  .seasonal .section-head > .link-arrow { justify-self: start; }
+  .seasonal__grid { gap: 12px; }
+  .seasonal-card { padding: 24px; }
+  .seasonal-card > a { margin-top: 12px; }
+  .instagram__photos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .instagram__image { aspect-ratio: 1; }
+}
+@media (max-width: 420px) {
+  .brand__wordmark { width: 114px; height: 10px; }
+  .brand--horizontal { gap: 8px; }
+  .nav__inner { gap: 8px; }
+  .hire__ctas .btn { width: 100%; }
+}

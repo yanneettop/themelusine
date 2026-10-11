@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261008-mobile-terrace">
+  <link rel="stylesheet" href="styles.css?v=20261010-refinement">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -52,13 +52,12 @@
       <a class="brand brand--horizontal" href="#top" aria-label="The Melusine, home"><img class="brand__mark" src="assets/mark.png" alt="" width="359" height="358"><span class="brand__wordmark" aria-hidden="true"></span></a>
       <div class="nav__end">
         <ul class="nav__links">
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="menu.html">Menus</a></li>
           <li><a href="private-hire.html">Private hire</a></li>
-          <li><a href="about.html">About us</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="about.html">Our story</a></li>
         </ul>
         <a class="btn btn--gold btn--sm nav__book" href="https://www.opentable.co.uk/r/the-melusine-reservations-london?restref=206064&amp;lang=en-GB&amp;ot_source=Restaurant%20website" target="_blank" rel="noopener" aria-label="Book a table"><span class="long">Book a table</span><span class="short">Book</span></a>
-        <a class="nav__ig" href="https://www.instagram.com/themelusine_skd/" target="_blank" rel="noopener" aria-label="Instagram @themelusine_skd"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="ig-icon__dot"/></svg></a>
       </div>
       <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span></button>
     </nav>
@@ -66,10 +65,11 @@
 
   <div class="drawer" id="drawer" hidden>
     <nav aria-label="Mobile">
-      <a href="menu.html">Menu</a>
-      <a href="gallery.html">Gallery</a>
+      <a href="menu.html">Menus</a>
       <a href="private-hire.html">Private hire</a>
-      <a href="about.html">About us</a>
+      <a href="events.html">Events</a>
+      <a href="about.html">Our story</a>
+      <a class="drawer__drinks" href="menu.html#drinks">Drinks &amp; wine</a>
     </nav>
     <div>
       <a class="btn btn--gold" href="https://www.opentable.co.uk/r/the-melusine-reservations-london?restref=206064&amp;lang=en-GB&amp;ot_source=Restaurant%20website" target="_blank" rel="noopener">Book a table</a>
@@ -80,7 +80,6 @@
 
   <main id="main">
 
-    <!-- ============ HERO ============ -->
     <section class="hero hero--editorial" id="top">
       <div class="hero__media" aria-hidden="true">
         <picture>
@@ -101,16 +100,10 @@
       <p class="hero__caption">On our terrace</p>
       <div class="hero__foot wrap">
         <p class="status" id="status"><span class="status__dot"></span><span id="status-text">Mon–Sat 12:00–22:30 · Sun 12:00–21:30</span></p>
-        <a class="scroll-cue" href="#happy" aria-label="Scroll down"><span></span></a>
+        <a class="scroll-cue" href="#menu" aria-label="Explore the menus"><span></span></a>
       </div>
     </section>
 
-    <aside class="dock-note" id="happy" aria-label="Happy hour">
-      <div class="wrap dock-note__inner"><p><span class="dock-note__label">A little afternoon ritual</span><strong>Oysters &amp; bubbles, by the docks.</strong></p><p>Every day, 3–6pm<br><span>£1.25 oysters · £10 glass of chilled bubbles</span></p><a class="link-arrow" href="menu.html">View the menu →</a></div>
-    </aside>
-    <div class="press-note wrap"><span>As reviewed by</span><strong>Grace Dent, <em>The Guardian</em></strong><a href="https://www.theguardian.com/food/2020/feb/28/the-melusine-london-e1-restaurant-review-grace-dent" target="_blank" rel="noopener noreferrer">Read the review →</a></div>
-
-    <!-- ============ FOOD & MENU PREVIEW ============ -->
     <section class="menu section" id="menu" aria-labelledby="menu-preview-title">
       <div class="wrap">
         <div class="section-head">
@@ -153,7 +146,55 @@
       </div>
     </section>
 
-    <!-- ============ OUR PLACE & STORY ============ -->
+    <section class="hire section" id="private-hire" aria-labelledby="hire-title">
+      <div class="wrap hire__grid">
+        <figure class="hire__photo">
+          <img src="assets/photos/dining-room-fish-mural-1200.webp" srcset="assets/photos/dining-room-fish-mural-640.webp 640w, assets/photos/dining-room-fish-mural-1200.webp 1200w, assets/photos/dining-room-fish-mural-1439.webp 1439w" sizes="(max-width: 860px) 92vw, 45vw" width="1439" height="959" alt="Tables laid for guests in The Melusine’s dining room, with teal banquettes and mustard chairs" loading="lazy" decoding="async">
+        </figure>
+        <div class="hire__body">
+          <p class="eyebrow">Private hire</p>
+          <h2 class="display display--light" id="hire-title">Your people. Our table.</h2>
+          <p>From team lunches to family celebrations and a big table of friends, we’ll help shape the occasion around you.</p>
+          <p>The whole restaurant is also available for exclusive private hire.</p>
+          <div class="hire__ctas">
+            <a class="btn btn--gold" href="private-hire.html#enquire">Plan your event</a>
+            <a class="link-arrow link-arrow--light" href="private-hire.html">Explore private hire →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seasonal section" id="events" aria-labelledby="seasonal-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="eyebrow eyebrow--dark">Seasonal gatherings &amp; events</p><h2 class="display" id="seasonal-title">Around our table.</h2></div>
+          <a class="link-arrow" href="events.html">Explore events →</a>
+        </div>
+        <!-- events:home:start -->
+        <div class="seasonal__grid">
+          <article class="seasonal-card seasonal-card--featured">
+            <p class="seasonal-card__label">Seasonal enquiries</p>
+            <h3>Christmas by the docks.</h3>
+            <p>Planning a Christmas gathering with colleagues, family or friends? Talk to us about your occasion.</p>
+            <a class="btn btn--navy" href="private-hire.html#enquire">Enquire about Christmas</a>
+          </article>
+          <article class="seasonal-card">
+            <p class="seasonal-card__label">Oyster events</p>
+            <h3>Oysters &amp; bubbles.</h3>
+            <p>For enquiries about oyster events, speak to the team. Confirmed event details will be shared here.</p>
+            <a class="link-arrow" href="events.html#oysters">Explore oyster events →</a>
+          </article>
+          <article class="seasonal-card">
+            <p class="seasonal-card__label">Collaborations</p>
+            <h3>Something shared.</h3>
+            <p>Have an idea for a collaboration at The Melusine? We’d be pleased to hear from you.</p>
+            <a class="link-arrow" href="events.html#collaborations">Explore collaborations →</a>
+          </article>
+        </div>
+        <!-- events:home:end -->
+      </div>
+    </section>
+
     <section class="story section" id="story" aria-labelledby="story-title">
       <div class="wrap story__grid">
         <figure class="story__img reveal">
@@ -170,85 +211,9 @@
           </div>
         </div>
       </div>
+      <div class="press-note wrap"><span>As reviewed by</span><strong>Grace Dent, <em>The Guardian</em></strong><a href="https://www.theguardian.com/food/2020/feb/28/the-melusine-london-e1-restaurant-review-grace-dent" target="_blank" rel="noopener noreferrer">Read the review →</a></div>
     </section>
 
-    <!-- ============ INSTAGRAM ============ -->
-    <section class="instagram section" id="instagram" aria-labelledby="instagram-title">
-      <div class="wrap instagram__layout">
-        <div class="instagram__intro">
-          <p class="eyebrow eyebrow--dark">On Instagram</p>
-          <h2 class="display" id="instagram-title">Life by the docks.</h2>
-          <p class="instagram__note">Seafood, moments at the table and life by the water. Follow along on Instagram.</p>
-          <a class="instagram__handle" href="https://www.instagram.com/themelusine_skd/" target="_blank" rel="noopener noreferrer"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="ig-icon__dot"/></svg><span>@themelusine_skd</span></a>
-          <a class="btn btn--navy instagram__cta" href="https://www.instagram.com/themelusine_skd/" target="_blank" rel="noopener noreferrer">Follow on Instagram <span aria-hidden="true">↗</span></a>
-        </div>
-        <ul class="instagram__photos" aria-label="Selected Instagram posts">
-          <li>
-            <a class="instagram__post" href="https://www.instagram.com/p/Chrp48WI1DL/" target="_blank" rel="noopener noreferrer" aria-label="View our fish dish post on Instagram (opens in a new tab)">
-              <figure>
-                <div class="instagram__image">
-                  <img src="assets/photos/instagram-fish-dish-800.webp" srcset="assets/photos/instagram-fish-dish-400.webp 400w, assets/photos/instagram-fish-dish-800.webp 800w" sizes="(max-width: 520px) 92vw, (max-width: 860px) 46vw, 30vw" width="1440" height="1079" alt="A fish dish with golden sauce held on a white plate beside the docks" loading="lazy" decoding="async">
-                  <span class="instagram__badge" aria-hidden="true"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="ig-icon__dot"/></svg></span>
-                </div>
-                <figcaption>At the table <span aria-hidden="true">↗</span></figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a class="instagram__post" href="https://www.instagram.com/p/B3OxsdknSEA/" target="_blank" rel="noopener noreferrer" aria-label="View our seafood post on Instagram (opens in a new tab)">
-              <figure>
-                <div class="instagram__image">
-                  <img src="assets/photos/instagram-prawns-800.webp" srcset="assets/photos/instagram-prawns-400.webp 400w, assets/photos/instagram-prawns-800.webp 800w" sizes="(max-width: 520px) 92vw, (max-width: 860px) 46vw, 30vw" width="1440" height="1440" alt="Large prawns on a wire rack, surrounded by plates of shellfish" loading="lazy" decoding="async">
-                  <span class="instagram__badge" aria-hidden="true"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="ig-icon__dot"/></svg></span>
-                </div>
-                <figcaption>From the sea <span aria-hidden="true">↗</span></figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a class="instagram__post" href="https://www.instagram.com/p/DeJuAhuosrm/" target="_blank" rel="noopener noreferrer" aria-label="View our wine post on Instagram (opens in a new tab)">
-              <figure>
-                <div class="instagram__image instagram__image--wine">
-                  <img src="assets/photos/instagram-wine-moment-800.webp" srcset="assets/photos/instagram-wine-moment-400.webp 400w, assets/photos/instagram-wine-moment-800.webp 800w" sizes="(max-width: 520px) 92vw, (max-width: 860px) 46vw, 30vw" width="1600" height="2133" alt="A black and white photograph of a hand holding a wine glass beside a bottle" loading="lazy" decoding="async">
-                  <span class="instagram__badge" aria-hidden="true"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="ig-icon__dot"/></svg></span>
-                </div>
-                <figcaption>A glass by the docks <span aria-hidden="true">↗</span></figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a class="instagram__post" href="https://www.instagram.com/p/Dd32grNI1GO/" target="_blank" rel="noopener noreferrer" aria-label="View our dessert post on Instagram (opens in a new tab)">
-              <figure>
-                <div class="instagram__image">
-                  <img src="assets/photos/instagram-dessert-800.webp" srcset="assets/photos/instagram-dessert-400.webp 400w, assets/photos/instagram-dessert-800.webp 800w" sizes="(max-width: 520px) 92vw, (max-width: 860px) 46vw, 30vw" width="1170" height="1170" alt="A dessert topped with nuts and small yellow fruits, surrounded by a ring of golden sauce" loading="lazy" decoding="async">
-                  <span class="instagram__badge" aria-hidden="true"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="ig-icon__dot"/></svg></span>
-                </div>
-                <figcaption>Something sweet <span aria-hidden="true">↗</span></figcaption>
-              </figure>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ============ PRIVATE HIRE PREVIEW ============ -->
-    <section class="events section" id="events">
-      <div class="wrap events__inner">
-        <div>
-          <p class="eyebrow reveal">Private hire</p>
-          <h2 class="display display--light reveal">Your people. Our table.</h2>
-        </div>
-        <div class="events__body reveal">
-          <p>From team lunches to family celebrations and a big table of friends, we’ll help shape the occasion around you. <strong>The whole restaurant is also available for exclusive private hire.</strong></p>
-          <div class="events__ctas">
-            <a class="btn btn--gold" href="private-hire.html">Plan your event</a>
-            <a class="link-arrow link-arrow--light" href="https://www.themelusine.co.uk/_files/ugd/48a963_ed079c1bd8cb49fcbdaeea8fc7bf0bcf.pdf" target="_blank" rel="noopener" type="application/pdf">View private hire brochure →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ GOOGLE REVIEWS ============ -->
     <section class="reviews section" id="reviews" aria-labelledby="reviews-title">
       <div class="wrap">
         <div class="reviews__head">
@@ -256,13 +221,6 @@
             <p class="eyebrow eyebrow--dark">Google reviews</p>
             <h2 class="display" id="reviews-title">What our guests say.</h2>
           </div>
-          <a class="reviews__rating" href="https://www.google.com/maps?cid=12584058579869944059" target="_blank" rel="noopener noreferrer" aria-label="Rated 4.6 out of 5 from 420 Google reviews. View our Google listing (opens in a new tab)">
-            <span class="reviews__score">4.6 <small>/ 5</small></span>
-            <span class="reviews__rating-detail">
-              <span class="reviews__stars" aria-hidden="true"><span class="reviews__stars-empty">★★★★★</span><span class="reviews__stars-fill">★★★★★</span></span>
-              <span>420 Google reviews</span>
-            </span>
-          </a>
         </div>
         <div class="reviews__grid">
           <figure class="review-card">
@@ -289,39 +247,49 @@
               <span class="review-card__source">Google review excerpt</span>
             </figcaption>
           </figure>
-          <figure class="review-card">
-            <blockquote><p>“I had a really lovely time here.”</p></blockquote>
-            <figcaption>
-              <span class="review-card__author">Christine</span>
-              <span class="review-card__stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>
-              <span class="review-card__source">Google review excerpt</span>
-            </figcaption>
-          </figure>
-          <figure class="review-card">
-            <blockquote><p>“The staff were excellent.”</p></blockquote>
-            <figcaption>
-              <span class="review-card__author">Tony Bloomfield</span>
-              <span class="review-card__stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>
-              <span class="review-card__source">Google review excerpt</span>
-            </figcaption>
-          </figure>
-          <figure class="review-card">
-            <blockquote><p>“A really enjoyable evening.”</p></blockquote>
-            <figcaption>
-              <span class="review-card__author">Becca</span>
-              <span class="review-card__stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>
-              <span class="review-card__source">Google review excerpt</span>
-            </figcaption>
-          </figure>
         </div>
         <div class="reviews__foot">
           <a class="btn btn--navy" href="https://www.google.com/maps?cid=12584058579869944059" target="_blank" rel="noopener noreferrer">Read our Google reviews <span aria-hidden="true">↗</span></a>
-          <p class="reviews__note">Rating checked <time datetime="2026-10-08">8 October 2026</time>. Selected excerpts via <a href="https://www.sluurpy.com/en/london/restaurant/7990646/the-melusine/reviews" target="_blank" rel="noopener noreferrer">Sluurpy ↗</a>.</p>
+          <p class="reviews__note">Selected excerpts via <a href="https://www.sluurpy.com/en/london/restaurant/7990646/the-melusine/reviews" target="_blank" rel="noopener noreferrer">Sluurpy ↗</a>.</p>
         </div>
       </div>
     </section>
 
-    <!-- ============ VISIT ============ -->
+    <section class="instagram section" id="instagram" aria-labelledby="instagram-title">
+      <div class="wrap instagram__layout">
+        <div class="instagram__intro">
+          <p class="eyebrow eyebrow--dark">On Instagram</p>
+          <h2 class="display" id="instagram-title">Life by the docks.</h2>
+          <p class="instagram__note">A few moments from the table and the water.</p>
+          <a class="instagram__handle" href="https://www.instagram.com/themelusine_skd/" target="_blank" rel="noopener noreferrer"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="ig-icon__dot"/></svg><span>@themelusine_skd</span></a>
+        </div>
+        <ul class="instagram__photos" aria-label="Selected Instagram posts">
+          <li>
+            <a class="instagram__post" href="https://www.instagram.com/p/Chrp48WI1DL/" target="_blank" rel="noopener noreferrer" aria-label="View our fish dish post on Instagram (opens in a new tab)">
+              <figure>
+                <div class="instagram__image">
+                  <img src="assets/photos/instagram-fish-dish-800.webp" srcset="assets/photos/instagram-fish-dish-400.webp 400w, assets/photos/instagram-fish-dish-800.webp 800w" sizes="(max-width: 860px) 46vw, 22vw" width="1440" height="1079" alt="A fish dish with golden sauce held on a white plate beside the docks" loading="lazy" decoding="async">
+                  <span class="instagram__badge" aria-hidden="true"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="ig-icon__dot"/></svg></span>
+                </div>
+                <figcaption>At the table <span aria-hidden="true">↗</span></figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <a class="instagram__post" href="https://www.instagram.com/p/DeJuAhuosrm/" target="_blank" rel="noopener noreferrer" aria-label="View our wine post on Instagram (opens in a new tab)">
+              <figure>
+                <div class="instagram__image instagram__image--wine">
+                  <img src="assets/photos/instagram-wine-moment-800.webp" srcset="assets/photos/instagram-wine-moment-400.webp 400w, assets/photos/instagram-wine-moment-800.webp 800w" sizes="(max-width: 860px) 46vw, 22vw" width="1600" height="2133" alt="A black and white photograph of a hand holding a wine glass beside a bottle" loading="lazy" decoding="async">
+                  <span class="instagram__badge" aria-hidden="true"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="ig-icon__dot"/></svg></span>
+                </div>
+                <figcaption>A glass by the docks <span aria-hidden="true">↗</span></figcaption>
+              </figure>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <section class="visit section" id="visit">
       <div class="wrap visit__grid">
         <div class="visit__info">
@@ -335,7 +303,6 @@
                 <table class="hours" id="hours">
                   <tr data-days="1,2,3,4,5,6"><th>Mon – Sat</th><td>12:00 – 22:30</td></tr>
                   <tr data-days="0"><th>Sunday</th><td>12:00 – 21:30</td></tr>
-                  <tr class="hours__hh"><th>Happy hour</th><td>15:00 – 18:00</td></tr>
                 </table>
               </dd>
             </div>
@@ -373,10 +340,11 @@
       <a class="footer__logo" href="#top"><img src="assets/logo-full-black.png" alt="The Melusine, home" width="800" height="471" loading="lazy"></a>
       <p class="footer__tag">Seafood · St Katharine Docks</p>
       <nav class="footer__nav" aria-label="Footer">
-        <a href="menu.html">Menu</a>
+        <a href="menu.html">Menus</a>
+        <a href="events.html">Events</a>
         <a href="gallery.html">Gallery</a>
         <a href="private-hire.html">Private hire</a>
-        <a href="about.html">About us</a>
+        <a href="about.html">Our story</a>
         <a href="https://www.opentable.co.uk/r/the-melusine-reservations-london?restref=206064&amp;lang=en-GB&amp;ot_source=Restaurant%20website" target="_blank" rel="noopener">Book a table</a>
       </nav>
       <address class="footer__contact">
@@ -397,6 +365,7 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20261008-header-compact" defer></script>
+  <script src="analytics.js?v=20261010-refinement" defer></script>
+  <script src="script.js?v=20261010-refinement" defer></script>
 </body>
 </html>
