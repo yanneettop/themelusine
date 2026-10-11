@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261010-refinement">
+  <link rel="stylesheet" href="styles.css?v=20261011-events-hire">
 </head>
 <body class="page-private-hire">
 
@@ -58,11 +58,11 @@
   <main id="main">
 
     <section class="phero">
-      <div class="phero__bg" aria-hidden="true"><img src="assets/photos/dining-room-fish-mural-1200.webp" alt=""></div>
+      <div class="phero__bg" aria-hidden="true"><img src="assets/photos/dining-room-fish-mural-1200.webp" srcset="assets/photos/dining-room-fish-mural-640.webp 640w, assets/photos/dining-room-fish-mural-1200.webp 1200w, assets/photos/dining-room-fish-mural-1439.webp 1439w" sizes="100vw" width="1439" height="959" alt="" fetchpriority="high"></div>
       <div class="wrap phero__inner">
         <p class="eyebrow reveal">Private hire</p>
         <h1 class="phero__title reveal">Your people.<br><em>Our table.</em></h1>
-        <p class="phero__lede reveal">From team lunches to family celebrations and a big table of friends, we’ll help shape the occasion around you.</p>
+        <p class="phero__lede reveal">Your own seafood restaurant by the water. Gather for a private lunch or dinner in the intimate setting of St Katharine Docks.</p>
         <div class="hero__ctas reveal">
           <a class="btn btn--gold" href="#enquire">Plan your event</a>
           <a class="btn btn--ghost" href="https://www.themelusine.co.uk/_files/ugd/48a963_ed079c1bd8cb49fcbdaeea8fc7bf0bcf.pdf" target="_blank" rel="noopener" type="application/pdf">View private hire brochure</a>
@@ -70,41 +70,79 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section hire-venue" id="venue" aria-labelledby="venue-title">
       <div class="wrap split">
         <div class="split__text">
-          <p class="eyebrow eyebrow--dark reveal">Exclusive hire</p>
-          <h2 class="display reveal">The whole restaurant,<br><em>just for you.</em></h2>
-          <p class="reveal">The whole restaurant is available for exclusive private hire. An intimate dining room on the ground floor of Ivory House, beside the water at St Katharine Docks, with your own guests around every table.</p>
-          <p class="reveal">Tell us what you have in mind and we’ll take care of the rest.</p>
+          <p class="eyebrow eyebrow--dark">The venue</p>
+          <h2 class="display" id="venue-title">A quiet corner<br><em>by the water.</em></h2>
+          <p>On the ground floor of Ivory House at St Katharine Docks, The Melusine is a light-filled, intimate restaurant with boats outside and the Tower of London nearby.</p>
+          <p>Chef Theodore Kyriakou’s open kitchen brings guests closer to the cooking. The atmosphere is relaxed and personal, with arrangements shaped around your occasion.</p>
+          <a class="link-arrow" href="index.html#visit">Find us at the docks →</a>
         </div>
-        <figure class="split__img reveal"><img src="assets/photos/dining-room-fish-mural-1200.webp" srcset="assets/photos/dining-room-fish-mural-640.webp 640w, assets/photos/dining-room-fish-mural-1200.webp 1200w, assets/photos/dining-room-fish-mural-1439.webp 1439w" sizes="(max-width: 860px) 100vw, 50vw" width="1439" height="959" alt="The dining room, with teal banquettes, mustard chairs and large fish prints on the walls" loading="lazy" decoding="async"></figure>
+        <figure class="split__img hire-venue__photo"><img src="assets/terrace-1672.webp" srcset="assets/terrace-960.webp 960w, assets/terrace-1672.webp 1672w" sizes="(max-width: 699px) 100vw, 50vw" width="1672" height="941" alt="Tables on The Melusine terrace beside the boats at St Katharine Docks" loading="lazy" decoding="async"></figure>
       </div>
     </section>
 
-    <section class="section section--tint">
+    <section class="section section--tint hire-gather" aria-labelledby="gather-title">
+      <div class="wrap">
+        <div class="gather-head"><p class="eyebrow eyebrow--dark">Ways to gather</p><h2 class="display" id="gather-title">Make room<br><em>for your occasion.</em></h2></div>
+        <div class="gather-options">
+          <article>
+            <p class="gather-options__number" aria-hidden="true">01</p>
+            <h3>Exclusive hire</h3>
+            <p>The whole restaurant, reserved for your guests for lunch or dinner. Your own private seafood restaurant by the water, for work, family or friends.</p>
+            <p>From welcome drinks to a playlist for the occasion, the team will work with you on the details.</p>
+            <a class="link-arrow" href="#enquire">Discuss exclusive hire →</a>
+          </article>
+          <article>
+            <p class="gather-options__number" aria-hidden="true">02</p>
+            <h3>Group dining</h3>
+            <p>A larger table and a seafood menu to share. Tell us your numbers, budget and dietary requirements, and we’ll tailor the menu around your group.</p>
+            <p>For team lunches, clients, family celebrations or a gathering of friends.</p>
+            <a class="link-arrow" href="#enquire">Plan a group meal →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hire-food" aria-labelledby="hire-food-title">
       <div class="wrap split split--flip">
         <div class="split__text">
-          <p class="eyebrow eyebrow--dark reveal">Group dining</p>
-          <h2 class="display reveal">A seafood menu<br><em>to share.</em></h2>
-          <p class="reveal">For larger groups, we can put together a seafood menu to share, tailored to your numbers, budget and dietary requirements.</p>
-          <ul class="occasions reveal">
-            <li>Team lunches</li>
-            <li>Family celebrations</li>
-            <li>Gatherings of friends</li>
-          </ul>
+          <p class="eyebrow eyebrow--dark">Food &amp; drinks</p>
+          <h2 class="display" id="hire-food-title">Shaped by the sea.<br><em>Made to share.</em></h2>
+          <p>Fish landed from the British Isles, seasonal produce and a touch of Mediterranean warmth from Theodore’s kitchen. Our menus follow what’s best from the boats and the market.</p>
+          <p>For your gathering, we’ll put together a menu to suit your guest numbers, budget and dietary requirements.</p>
+          <p>Wines chosen for their character and connection to place, alongside cocktails created at The Melusine, complete the table.</p>
+          <div class="detail-links"><a class="link-arrow" href="menu.html">Explore our food →</a><a class="link-arrow" href="menu.html#drinks">Drinks &amp; wine →</a></div>
         </div>
-        <figure class="split__img reveal"><img src="assets/photos/sharing-plates-with-guests-1200.webp" srcset="assets/photos/sharing-plates-with-guests-640.webp 640w, assets/photos/sharing-plates-with-guests-1200.webp 1200w, assets/photos/sharing-plates-with-guests-1600.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" width="1600" height="1066" alt="Guests reaching for plates of seafood, with glasses of white wine on the table" loading="lazy" decoding="async"></figure>
+        <figure class="split__img"><img src="assets/photos/sharing-plates-with-guests-1200.webp" srcset="assets/photos/sharing-plates-with-guests-640.webp 640w, assets/photos/sharing-plates-with-guests-1200.webp 1200w, assets/photos/sharing-plates-with-guests-1600.webp 1600w" sizes="(max-width: 699px) 100vw, 50vw" width="1600" height="1066" alt="Guests sharing seafood plates and white wine around a table at The Melusine" loading="lazy" decoding="async"></figure>
       </div>
     </section>
 
-    <section class="section enquire" id="enquire">
+    <section class="section hire-layout" id="space" aria-labelledby="space-title">
+      <div class="wrap layout-grid">
+        <div><p class="eyebrow eyebrow--dark">Space &amp; arrangements</p><h2 class="display" id="space-title">A setting<br><em>that suits you.</em></h2><p>Seated meals and standing gatherings offer different ways to use the room. Tell us how you’d like to gather, and we’ll discuss the arrangement and suitable guest numbers with you.</p></div>
+        <div>
+          <dl class="layout-notes">
+            <div><dt>Seated dining</dt><dd>Tables arranged for lunch or dinner, with the open kitchen at the heart of the room.</dd></div>
+            <div><dt>Standing gatherings</dt><dd>A different arrangement for an occasion spent moving around the room.</dd></div>
+          </dl>
+          <div class="hire-pricing" aria-labelledby="pricing-title">
+            <h3 id="pricing-title">Planning your budget</h3>
+            <p>Private hire is subject to a minimum spend. Contact the team to discuss the requirement for your preferred date and occasion.</p>
+            <a class="link-arrow" href="#enquire">Discuss your arrangements →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint enquire" id="enquire">
       <div class="wrap enquire__grid">
         <div class="enquire__intro">
           <p class="eyebrow eyebrow--dark reveal">Enquire</p>
           <h2 class="display reveal">Tell us what<br><em>you have in mind.</em></h2>
-          <p class="reveal">Tell us about your occasion. For now, please email or call us to make your enquiry. No date yet? Leave it blank.</p>
-          <p class="enquire__direct reveal">Prefer to write directly? Email <a href="mailto:hello@themelusine.co.uk">hello@themelusine.co.uk</a> or call <a class="nowrap" href="tel:02077022976">020 7702 2976</a>.</p>
+          <p class="reveal">For a private gathering or group meal, email or call us with your preferred date, approximate guest numbers and what you have in mind.</p>
+          <p class="enquire__direct reveal">Email <a href="mailto:hello@themelusine.co.uk">hello@themelusine.co.uk</a> or call <a class="nowrap" href="tel:02077022976">020 7702 2976</a>.</p>
           <a class="link-arrow reveal" href="https://www.themelusine.co.uk/_files/ugd/48a963_ed079c1bd8cb49fcbdaeea8fc7bf0bcf.pdf" target="_blank" rel="noopener" type="application/pdf">View private hire brochure →</a>
         </div>
 
@@ -122,18 +160,28 @@
           </div>
           <div class="eform__pair">
             <div class="eform__row">
+              <label for="ef-phone">Phone <span>(optional)</span></label>
+              <input id="ef-phone" name="Phone" type="tel" autocomplete="tel" maxlength="40">
+            </div>
+            <div class="eform__row">
+              <label for="ef-occasion">Type of occasion <span>(optional)</span></label>
+              <input id="ef-occasion" name="Type of occasion" type="text" maxlength="120">
+            </div>
+          </div>
+          <div class="eform__pair">
+            <div class="eform__row">
               <label for="ef-date">Preferred date <span>(optional)</span></label>
               <input id="ef-date" name="Preferred date" type="date" aria-describedby="ef-date-err">
               <p class="eform__err" id="ef-date-err" hidden>Please choose today or a future date, or leave it blank.</p>
             </div>
             <div class="eform__row">
-              <label for="ef-guests">Number of guests <span>(optional)</span></label>
+              <label for="ef-guests">Approximate guests <span>(optional)</span></label>
               <input id="ef-guests" name="Number of guests" type="number" inputmode="numeric" min="1" step="1" aria-describedby="ef-guests-err">
               <p class="eform__err" id="ef-guests-err" hidden>Please enter a number of guests, or leave it blank.</p>
             </div>
           </div>
           <div class="eform__row">
-            <label for="ef-message">Message</label>
+            <label for="ef-message">Additional information</label>
             <textarea id="ef-message" name="Message" rows="5" maxlength="3000" required aria-describedby="ef-message-err"></textarea>
             <p class="eform__err" id="ef-message-err" hidden>Please add a short message about your event.</p>
           </div>
@@ -141,7 +189,7 @@
             <label for="ef-website">Leave this field empty</label>
             <input id="ef-website" name="website" type="text" tabindex="-1" autocomplete="off">
           </div>
-          <p class="eform__note">We’ll use your details to respond to your enquiry. <a href="https://www.themelusine.co.uk/privacy-policy">Privacy policy</a>.</p>
+          <p class="eform__note">For enquiries made by email or telephone, please see our <a href="https://www.themelusine.co.uk/privacy-policy">Privacy policy</a>.</p>
           <button class="btn btn--navy" type="submit" disabled>Online enquiries unavailable</button>
           <noscript><p class="eform__note">Please email or call us to make your enquiry.</p></noscript>
           <p class="eform__feedback" id="enquiry-feedback" role="status" aria-live="polite" tabindex="-1" hidden></p>
