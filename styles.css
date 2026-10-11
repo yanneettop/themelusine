@@ -860,3 +860,98 @@ html:not(.js) .nav__toggle { display: none !important; }
   .nav__inner { gap: 8px; }
   .hire__ctas .btn { width: 100%; }
 }
+
+/* Homepage polish: scoped so dedicated pages retain their existing layouts. */
+.page-index {
+  --home-space: clamp(48px, 5.5vw, 80px);
+  --home-gap: clamp(28px, 4.5vw, 64px);
+}
+.page-index main > .section { padding-block: var(--home-space); }
+.page-index .home-food__grid { align-items: center; gap: var(--home-gap); }
+.page-index .scroll-cue { width: 44px; height: 44px; border: 0; }
+.page-index .scroll-cue::before { content: ""; position: absolute; inset: 1px 9px; border: 1px solid rgba(213, 218, 208, .45); border-radius: 13px; }
+.page-index .scroll-cue span, .page-index .status.is-open .status__dot { animation: none; }
+.page-index .catch-card__price { text-align: right; }
+.page-index .catch-card__heading { gap: 12px; }
+.page-index .hire__grid { grid-template-columns: 1fr 1.05fr; gap: var(--home-gap); }
+.page-index .hire__body { order: -1; }
+.page-index .hire__body .display { max-width: 13ch; }
+.page-index .hire__body > p:not(.eyebrow) { max-width: 44ch; }
+.page-index .hire__ctas { gap: 12px 24px; }
+.page-index .story__grid { grid-template-columns: 1fr 1.05fr; gap: var(--home-gap); }
+.page-index .story__text .display { max-width: 17ch; }
+.page-index .story__text > p:not(.eyebrow) { max-width: 48ch; }
+.page-index .story .press-note {
+  justify-content: flex-start; gap: 4px 14px; margin-top: 24px;
+  padding: 20px 0 0; text-align: left;
+}
+.page-index .story .press-note > span { flex-basis: 100%; }
+.page-index .story .press-note strong { font-size: 16px; }
+.page-index .story .press-note a { display: inline-flex; align-items: center; min-height: 44px; }
+.page-index .link-arrow {
+  display: inline-flex; align-items: center; min-height: 44px;
+  padding-block: 8px; line-height: 1.4;
+}
+.page-index .seasonal__grid { gap: 20px; }
+.page-index .seasonal-card { padding: 24px 20px; }
+.page-index .seasonal-card h3 { font-size: clamp(24px, 2.1vw, 28px); margin-bottom: 12px; }
+.page-index .seasonal-card__label { margin-bottom: 10px; }
+.page-index .seasonal-card .link-arrow { font-size: 12px; letter-spacing: .05em; }
+.page-index .reviews__foot { gap: 12px 24px; }
+.page-index main > .instagram { padding-block: clamp(32px, 3.5vw, 48px); }
+.page-index .instagram__layout { gap: var(--home-gap); }
+.page-index .instagram__handle { min-height: 44px; }
+.page-index .instagram__badge { display: none; }
+.page-index .instagram__post figcaption { font-size: 12px; }
+.page-index .visit__grid { gap: var(--home-gap); }
+.page-index .hours th, .page-index .hours td { padding-block: 5px; }
+.page-index .visit__list dd > a { display: inline-flex; align-items: center; min-height: 44px; }
+.page-index .visit__list dd > a:last-child { font-size: 13px; }
+.page-index .footer__nav, .page-index .footer__social, .page-index .footer__legal { gap: 4px 24px; }
+.page-index .footer :is(.footer__nav, .footer__social, .footer__legal) a,
+.page-index .footer__contact a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; }
+.page-index .instagram__handle:focus-visible,
+.page-index .instagram__post:focus-visible { outline-color: var(--teal); }
+@media (min-width: 700px) and (max-width: 860px) {
+  .page-index .home-food__grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .page-index .home-food__photo img { aspect-ratio: 3 / 4; object-position: center; }
+  .page-index .catch-card h3 { font-size: 21px; }
+  .page-index .catch-card__price { font-size: 16px; }
+  .page-index .menu__links { flex-direction: column; gap: 10px; }
+  .page-index .menu__links .btn { width: 100%; }
+  .page-index .hire__grid, .page-index .story__grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .page-index .hire__photo img, .page-index .story__img img { aspect-ratio: 1; }
+  .page-index .hire__ctas { flex-direction: column; align-items: flex-start; }
+  .page-index .seasonal__grid { grid-template-columns: 1fr 1fr; gap: 12px 24px; }
+  .page-index .seasonal-card--featured { grid-column: 1 / -1; }
+  .page-index .seasonal-card--featured > p:not(.seasonal-card__label) { max-width: 52ch; }
+  .page-index .instagram__layout { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .page-index .visit__grid { grid-template-columns: 1fr 1.05fr; gap: 28px; }
+  .page-index .visit__list > div { grid-template-columns: 1fr; gap: 4px; }
+  .page-index .hours tr.is-today th::before { margin-left: 0; }
+  .page-index .locate__body { padding: 24px; }
+}
+@media (max-width: 699px) {
+  .page-index .hire__grid, .page-index .story__grid { grid-template-columns: 1fr; }
+  .page-index .hire__body .display, .page-index .story__text .display { max-width: 17ch; }
+  .page-index .hire__ctas .btn { width: 100%; }
+  .page-index .seasonal .section-head { margin-bottom: 20px; }
+  .page-index .seasonal-card { padding: 20px; }
+  .page-index .seasonal-card:not(.seasonal-card--featured) { padding: 20px 0; }
+  .page-index .seasonal-card > a { margin-top: 4px; }
+  .page-index .reviews__foot .btn { width: 100%; }
+  .page-index .instagram__layout { gap: 20px; }
+  .page-index .instagram__photos { gap: 12px; }
+  .page-index .visit__info > .btn { width: 100%; }
+  .page-index .locate__body { padding: 24px 20px; }
+  .page-index .locate__actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .page-index .locate__actions .btn { padding-inline: 8px; font-size: 11px; letter-spacing: .08em; }
+  .page-index .locate__actions .link-arrow { grid-column: 1 / -1; justify-self: start; }
+  .page-index .footer__contact > span:nth-child(2) { max-width: 100%; }
+}
+@media (max-width: 520px) {
+  .page-index .hero__title { line-height: 1.08; }
+  .page-index .hero__lede { max-width: 34ch; }
+  .page-index .home-food__photo img { aspect-ratio: 6 / 5; object-position: center 55%; }
+  .page-index .story__links { gap: 10px 20px; }
+}
