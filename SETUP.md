@@ -69,6 +69,16 @@ For Wix comparison, obtain dated Wix reports and GA4 access where available. Agr
 
 ## Verification
 
+### Internal sources and shared assets
+
+The current GitHub Pages branch deployment uses Jekyll. `_config.yml` excludes `_development`, which retains the local font lab and migration inventory. The font lab has its own `noindex, nofollow`; public restaurant pages remain indexable. Keep this folder excluded if hosting changes to a raw static deployment, and check that both old `/font-lab.html` and `/_development/font-lab.html` return 404 after the next approved deployment. The retained lab can be opened locally at `/_development/font-lab.html`.
+
+All six public pages use shared asset version `20261011-technical-completion`. When editing a shared stylesheet or script, update its version consistently on all six pages before deployment. Header/favicon and footer logos use lossless WebP copies with identical RGBA pixels; original PNG sources are retained. Photography has not changed. Open Graph images use the intended production domain; retrieval and social previews must be checked after the new production assets are hosted.
+
+Migration planning and business approval gates are documented in `_development/MIGRATION.md`; no live migration has been performed.
+
+### Existing checks
+
 There was no existing package-based build or test command. This remains a static site; the content generator is the only build step. Syntax/content checks:
 
 ```powershell

@@ -1,0 +1,4 @@
+# GitHub Pages currently builds main at the repository root with Jekyll.
+# Keep internal review sources out of the published site.
+exclude:
+  - _development
