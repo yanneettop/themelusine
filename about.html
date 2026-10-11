@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261010-refinement">
+  <link rel="stylesheet" href="styles.css?v=20261011-story-gallery">
 </head>
 <body class="page-about">
 
@@ -103,6 +103,29 @@
         <figure class="split__img reveal"><img src="assets/photos/three-wines-terrace-900.webp" srcset="assets/photos/three-wines-terrace-640.webp 640w, assets/photos/three-wines-terrace-900.webp 900w" sizes="(max-width: 860px) 100vw, 50vw" width="900" height="900" alt="White, rosé and red wine on the terrace, with Ivory House behind" loading="lazy" decoding="async"></figure>
       </div>
     </section>
+
+    <section class="section story-gallery section--tint" id="gallery" aria-labelledby="story-gallery-title">
+      <div class="wrap">
+        <div class="gpreview__head">
+          <div><p class="eyebrow eyebrow--dark">Gallery</p><h2 class="display" id="story-gallery-title">The Melusine<br><em>in pictures.</em></h2></div>
+          <a class="link-arrow" href="gallery.html">View the full gallery →</a>
+        </div>
+        <ul class="gpreview__grid story-gallery__grid">
+          <li><figure><a class="gitem__link" href="assets/terrace-1672.webp" data-caption="By the water"><img src="assets/terrace-960.webp" srcset="assets/terrace-960.webp 960w, assets/terrace-1672.webp 1672w" sizes="(max-width: 860px) 45vw, 25vw" width="1672" height="941" alt="The Melusine terrace beside the boats at St Katharine Docks" loading="lazy" decoding="async"></a><figcaption>By the water</figcaption></figure></li>
+          <li><figure><a class="gitem__link" href="assets/photos/sharing-plates-with-guests-1600.webp" data-caption="Around the table"><img src="assets/photos/sharing-plates-with-guests-640.webp" srcset="assets/photos/sharing-plates-with-guests-640.webp 640w, assets/photos/sharing-plates-with-guests-1200.webp 1200w, assets/photos/sharing-plates-with-guests-1600.webp 1600w" sizes="(max-width: 860px) 45vw, 25vw" width="1600" height="1066" alt="Guests sharing seafood plates and white wine around a table" loading="lazy" decoding="async"></a><figcaption>Around the table</figcaption></figure></li>
+          <li><figure><a class="gitem__link" href="assets/photos/langoustines-wine-table-1600.webp" data-caption="Seasonal seafood"><img src="assets/photos/langoustines-wine-table-640.webp" srcset="assets/photos/langoustines-wine-table-640.webp 640w, assets/photos/langoustines-wine-table-1200.webp 1200w, assets/photos/langoustines-wine-table-1600.webp 1600w" sizes="(max-width: 860px) 45vw, 25vw" width="1600" height="1066" alt="Langoustines with lemon beside a glass of white wine and the menu" loading="lazy" decoding="async"></a><figcaption>Seasonal seafood</figcaption></figure></li>
+          <li><figure><a class="gitem__link" href="assets/photos/blue-cocktail-overhead-1600.webp" data-caption="Drinks at The Melusine"><img src="assets/photos/blue-cocktail-overhead-640.webp" srcset="assets/photos/blue-cocktail-overhead-640.webp 640w, assets/photos/blue-cocktail-overhead-1200.webp 1200w, assets/photos/blue-cocktail-overhead-1600.webp 1600w" sizes="(max-width: 860px) 45vw, 25vw" width="1600" height="1066" alt="A blue cocktail garnished with a dried orange slice, viewed from above" loading="lazy" decoding="async"></a><figcaption>Drinks at The Melusine</figcaption></figure></li>
+        </ul>
+      </div>
+    </section>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+      <figure class="lightbox__figure"><img class="lightbox__img" alt=""><figcaption class="lightbox__caption"></figcaption></figure>
+      <p class="lightbox__count" aria-live="polite"></p>
+      <button class="lightbox__btn lightbox__close" type="button" aria-label="Close">×</button>
+      <button class="lightbox__btn lightbox__prev" type="button" aria-label="Previous photo">‹</button>
+      <button class="lightbox__btn lightbox__next" type="button" aria-label="Next photo">›</button>
+    </dialog>
 
     <section class="mcta">
       <div class="wrap mcta__inner">

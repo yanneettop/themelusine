@@ -956,6 +956,15 @@ html:not(.js) .nav__toggle { display: none !important; }
   .page-index .story__links { gap: 10px 20px; }
 }
 
+/* Our Story: a compact gallery using the existing photo viewer. */
+.page-about .story-gallery { padding: clamp(48px, 5.5vw, 80px) 0; }
+.page-about .story-gallery .display { font-size: clamp(32px, 3.6vw, 48px); line-height: 1.12; }
+.page-about .story-gallery .link-arrow { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 0; }
+.page-about .story-gallery__grid figure { margin: 0; }
+.page-about .story-gallery__grid .gitem__link { display: block; height: auto; overflow: hidden; }
+.page-about .story-gallery__grid img { aspect-ratio: 1; transition: none; }
+.page-about .story-gallery__grid figcaption { margin-top: 10px; font-size: 13px; color: var(--charcoal-soft); }
+
 /* Events and private hire: shared editorial spacing, scoped to these pages. */
 :is(.page-events, .page-private-hire) { --occasion-gap: clamp(28px, 4.5vw, 64px); --section: clamp(48px, 5.5vw, 80px); }
 :is(.page-events, .page-private-hire) .display { font-size: clamp(32px, 3.6vw, 48px); line-height: 1.12; text-wrap: balance; margin-bottom: 22px; }
