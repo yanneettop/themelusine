@@ -3,11 +3,8 @@
   const doc = document.documentElement;
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Header: transparent over the photographic hero, solid once scrolled
+  // Shared solid header and mobile navigation
   const nav = document.getElementById('nav');
-  const onScroll = () => nav.classList.toggle('is-solid', window.scrollY > 40);
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
 
   // Mobile drawer
   const toggle = document.querySelector('.nav__toggle');
@@ -17,7 +14,6 @@
     toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     drawer.hidden = !open;
     document.querySelectorAll('main, footer, .skip').forEach((el) => { el.inert = open; });
-    nav.classList.toggle('is-solid', open || window.scrollY > 40);
     doc.style.overflow = open ? 'hidden' : '';
     if (open) drawer.querySelector('a').focus();
     else if (restoreFocus) toggle.focus();
@@ -338,4 +334,57 @@
   addEventListener('resize', schedule, { passive: true });
   preference.addEventListener('change', configure);
   configure();
+})();
+
+// Instagram carousel: native swipe and keyboard navigation; no autoplay.
+(function () {
+  const carousel = document.querySelector('.instagram__carousel');
+  if (!carousel) return;
+  const track = carousel.querySelector('.instagram__photos');
+  const slides = [...track.children];
+  const controls = carousel.querySelector('.instagram__controls');
+  const previous = carousel.querySelector('[data-instagram-prev]');
+  const next = carousel.querySelector('[data-instagram-next]');
+  const status = carousel.querySelector('.instagram__position');
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  let frame = 0;
+  const count = () => innerWidth <= 699 ? 1 : 3;
+  const offset = index => slides[index].offsetLeft - slides[0].offsetLeft;
+  function current() {
+    let nearest = 0;
+    slides.forEach((slide, index) => {
+      if (Math.abs(offset(index) - track.scrollLeft) < Math.abs(offset(nearest) - track.scrollLeft)) nearest = index;
+    });
+    return Math.min(nearest, slides.length - count());
+  }
+  function update() {
+    frame = 0;
+    const start = current();
+    const end = Math.min(start + count(), slides.length);
+    status.textContent = count() === 1 ? `Post ${start + 1} of ${slides.length}` : `Posts ${start + 1}–${end} of ${slides.length}`;
+    previous.disabled = track.scrollLeft <= 2;
+    next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 2;
+  }
+  function schedule() {
+    if (!frame) frame = requestAnimationFrame(update);
+  }
+  function move(direction) {
+    const target = Math.max(0, Math.min(slides.length - count(), current() + direction * count()));
+    track.scrollTo({ left: offset(target), behavior: motion.matches ? 'instant' : 'smooth' });
+  }
+  previous.addEventListener('click', () => move(-1));
+  next.addEventListener('click', () => move(1));
+  track.addEventListener('scroll', schedule, { passive: true });
+  track.addEventListener('keydown', event => {
+    if (event.target !== track) return;
+    if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+      event.preventDefault(); move(event.key === 'ArrowRight' ? 1 : -1);
+    } else if (event.key === 'Home' || event.key === 'End') {
+      event.preventDefault();
+      track.scrollTo({ left: event.key === 'Home' ? 0 : track.scrollWidth, behavior: motion.matches ? 'instant' : 'smooth' });
+    }
+  });
+  new ResizeObserver(schedule).observe(track);
+  controls.hidden = false;
+  update();
 })();

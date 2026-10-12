@@ -2,6 +2,10 @@
 
 The site is static HTML, CSS and JavaScript. The repository remote is the GitHub Pages reference supplied in the brief. No application server, enquiry endpoint, email provider, deployment workflow, package manifest, GA4/GTM tag, analytics ID or consent platform was found in the active project. The live Wix site has not been changed. No deployment was made.
 
+## Shared header
+
+Edit `content/header.html`, then run `node tools/build-header.cjs`. Run `node tools/build-header.cjs --check` to verify all six public pages use the same header and mobile drawer. The generator sets the current-page link for each page. Keep the shared-header markers. The header uses a solid navy background consistently at the top and after scrolling. The drinks URL redirects to the menu and uses that page's header.
+
 ## Events content
 
 Edit `content/events.json`, then run:

@@ -1,44 +1,90 @@
 {
   "account": "themelusine_skd",
   "profile": "https://www.instagram.com/themelusine_skd/",
-  "selection": "static",
+  "selection": "static curated carousel; 9 distinct posts; no automatic feed synchronisation",
   "retrieved_on": "2026-10-08",
   "photos": [
     {
+      "post": "https://www.instagram.com/p/Chrp48WI1DL/",
       "files": [
         "instagram-fish-dish-400.webp",
         "instagram-fish-dish-800.webp"
       ],
-      "post": "https://www.instagram.com/p/Chrp48WI1DL/",
-      "description": "A fish dish on a white plate beside the docks",
-      "source": "Public Instagram post embed"
+      "description": "A fish dish with golden sauce held on a white plate beside the docks",
+      "source": "Verified public Instagram post embed; parent carousel post links verified through public profile embed where applicable"
     },
     {
-      "files": [
-        "instagram-prawns-400.webp",
-        "instagram-prawns-800.webp"
-      ],
-      "post": "https://www.instagram.com/p/B3OxsdknSEA/",
-      "description": "Prawns and shellfish on a wire rack",
-      "source": "Public Instagram post embed"
-    },
-    {
+      "post": "https://www.instagram.com/p/DeJuAhuosrm/",
       "files": [
         "instagram-wine-moment-400.webp",
         "instagram-wine-moment-800.webp"
       ],
-      "post": "https://www.instagram.com/p/DeJuAhuosrm/",
       "description": "A black and white photograph of a hand holding a wine glass beside a bottle",
-      "source": "Public Instagram post embed"
+      "source": "Verified public Instagram post embed; parent carousel post links verified through public profile embed where applicable"
     },
     {
+      "post": "https://www.instagram.com/p/B3OxsdknSEA/",
       "files": [
-        "instagram-dessert-400.webp",
-        "instagram-dessert-800.webp"
+        "instagram-prawns-400.webp",
+        "instagram-prawns-800.webp"
       ],
-      "post": "https://www.instagram.com/p/Dd32grNI1GO/",
-      "description": "A dessert topped with nuts and small yellow fruits, surrounded by a ring of golden sauce",
-      "source": "Public Instagram post embed"
+      "description": "Prawns and shellfish on a wire rack",
+      "source": "Verified public Instagram post embed; parent carousel post links verified through public profile embed where applicable"
+    },
+    {
+      "post": "https://www.instagram.com/p/DeZdnRdo7yD/",
+      "files": [
+        "instagram-DeZdnRdo7yD-400.webp",
+        "instagram-DeZdnRdo7yD-800.webp"
+      ],
+      "description": "A chef preparing dishes in the open kitchen at The Melusine",
+      "source": "Verified public Instagram post embed; parent carousel post links verified through public profile embed where applicable"
+    },
+    {
+      "post": "https://www.instagram.com/p/Dd321g0iJOn/",
+      "files": [
+        "instagram-Dd321g0iJOn-400.webp",
+        "instagram-Dd321g0iJOn-800.webp"
+      ],
+      "description": "A dessert topped with nuts and small yellow fruits, with a ring of golden sauce",
+      "source": "Verified public Instagram post embed; parent carousel post links verified through public profile embed where applicable"
+    },
+    {
+      "post": "https://www.instagram.com/p/DdwfAuQiCPK/",
+      "files": [
+        "instagram-DdwfAuQiCPK-400.webp",
+        "instagram-DdwfAuQiCPK-800.webp"
+      ],
+      "description": "A cooked lobster served with herbs and salad on a white plate",
+      "source": "Verified public Instagram post embed; parent carousel post links verified through public profile embed where applicable"
+    },
+    {
+      "post": "https://www.instagram.com/p/DdtQBAoiMKr/",
+      "files": [
+        "instagram-DdtQBAoiMKr-400.webp",
+        "instagram-DdtQBAoiMKr-800.webp"
+      ],
+      "description": "A hand holding a spiny lobster above seafood delivery crates",
+      "source": "Verified public Instagram post embed; parent carousel post links verified through public profile embed where applicable"
+    },
+    {
+      "post": "https://www.instagram.com/p/CpcjsvboLRO/",
+      "files": [
+        "instagram-CpcjsvboLRO-400.webp",
+        "instagram-CpcjsvboLRO-800.webp"
+      ],
+      "description": "The dining room with fish artwork, teal seating and tables set for guests",
+      "source": "Verified public Instagram post embed; parent carousel post links verified through public profile embed where applicable"
+    },
+    {
+      "post": "https://www.instagram.com/p/Ddqo7V5CE0c/",
+      "files": [
+        "instagram-Ddqo7V5CE0c-400.webp",
+        "instagram-Ddqo7V5CE0c-800.webp"
+      ],
+      "description": "The Melusine Events 2026/2027 artwork with a gold logo above blue waves",
+      "source": "Verified public Instagram post embed; parent carousel post links verified through public profile embed where applicable"
     }
-  ]
+  ],
+  "updated_on": "2026-10-12"
 }

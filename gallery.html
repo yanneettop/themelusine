@@ -18,23 +18,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261011-technical-completion">
+  <link rel="stylesheet" href="styles.css?v=20261012-consistent-header">
 </head>
 <body class="page-gallery">
 
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="nav nav--over" id="nav">
+  <!-- Shared header:start -->
+  <header class="nav" id="nav">
     <nav class="nav__inner" aria-label="Main">
       <a class="brand brand--horizontal" href="index.html" aria-label="The Melusine, home"><img class="brand__mark" src="assets/mark.webp" alt="" width="359" height="358"><span class="brand__wordmark" aria-hidden="true"></span></a>
       <div class="nav__end">
         <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
           <li><a href="menu.html">Menus</a></li>
           <li><a href="private-hire.html">Private hire</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="about.html">Our story</a></li>
         </ul>
-        <a class="btn btn--gold btn--sm nav__book" href="https://www.opentable.co.uk/r/the-melusine-reservations-london?restref=206064&amp;lang=en-GB&amp;ot_source=Restaurant%20website" target="_blank" rel="noopener" aria-label="Book a table"><span class="long">Book a table</span><span class="short">Book</span></a>
+        <a class="btn btn--gold btn--sm nav__book" href="https://www.opentable.co.uk/r/the-melusine-reservations-london?restref=206064&amp;lang=en-GB&amp;ot_source=Restaurant%20website" target="_blank" rel="noopener noreferrer" aria-label="Book a table"><span class="long">Book a table</span><span class="short">Book</span></a>
+        <a class="nav__ig" href="https://www.instagram.com/themelusine_skd/" target="_blank" rel="noopener noreferrer" aria-label="The Melusine on Instagram (opens in a new tab)"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="ig-icon__dot"/></svg></a>
       </div>
       <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span></button>
     </nav>
@@ -42,6 +45,7 @@
 
   <div class="drawer" id="drawer" hidden>
     <nav aria-label="Mobile">
+      <a href="index.html">Home</a>
       <a href="menu.html">Menus</a>
       <a href="private-hire.html">Private hire</a>
       <a href="events.html">Events</a>
@@ -49,11 +53,12 @@
       <a class="drawer__drinks" href="menu.html#drinks">Drinks &amp; wine</a>
     </nav>
     <div>
-      <a class="btn btn--gold" href="https://www.opentable.co.uk/r/the-melusine-reservations-london?restref=206064&amp;lang=en-GB&amp;ot_source=Restaurant%20website" target="_blank" rel="noopener">Book a table</a>
+      <a class="btn btn--gold" href="https://www.opentable.co.uk/r/the-melusine-reservations-london?restref=206064&amp;lang=en-GB&amp;ot_source=Restaurant%20website" target="_blank" rel="noopener noreferrer">Book a table</a>
       <p class="drawer__meta">Ivory House, St Katharine Docks, London E1W 1AT<br><a href="tel:+442077022976">020 7702 2976</a></p>
-      <a class="drawer__ig" href="https://www.instagram.com/themelusine_skd/" target="_blank" rel="noopener"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="ig-icon__dot"/></svg><span>@themelusine_skd</span></a>
+      <a class="drawer__ig" href="https://www.instagram.com/themelusine_skd/" target="_blank" rel="noopener noreferrer"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="ig-icon__dot"/></svg><span>@themelusine_skd</span></a>
     </div>
   </div>
+  <!-- Shared header:end -->
 
   <main id="main">
 
@@ -72,26 +77,32 @@
         <li class="gitem gitem--wide">
           <figure><a class="gitem__link" href="assets/photos/dining-room-fish-mural-1439.webp" data-caption="The dining room"><img src="assets/photos/dining-room-fish-mural-1200.webp" srcset="assets/photos/dining-room-fish-mural-640.webp 640w, assets/photos/dining-room-fish-mural-1200.webp 1200w, assets/photos/dining-room-fish-mural-1439.webp 1439w" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 66vw" width="1439" height="959" alt="The dining room, with teal banquettes, mustard chairs and large fish prints on the walls" loading="lazy" decoding="async"></a><figcaption>The dining room</figcaption></figure>
         </li>
+        <li class="gitem gitem--wide"><figure><a class="gitem__link" href="assets/photos/private-hire-toast-1536.webp" data-caption="A toast at The Melusine"><img src="assets/photos/private-hire-toast-1200.webp" srcset="assets/photos/private-hire-toast-640.webp 640w, assets/photos/private-hire-toast-1200.webp 1200w, assets/photos/private-hire-toast-1536.webp 1536w" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 66vw" width="1536" height="1024" alt="Two guests raising glasses of white wine in a toast inside The Melusine" loading="lazy" decoding="async"></a><figcaption>A toast at The Melusine</figcaption></figure></li>
+        <li class="gitem gitem--tall gitem--chef"><figure><a class="gitem__link" href="assets/photos/chef-at-work-1024.webp" data-caption="In the kitchen"><img src="assets/photos/chef-at-work-960.webp" srcset="assets/photos/chef-at-work-640.webp 640w, assets/photos/chef-at-work-960.webp 960w, assets/photos/chef-at-work-1024.webp 1024w" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw" width="1024" height="1536" alt="A chef preparing a fish fillet in The Melusine kitchen" loading="lazy" decoding="async"></a><figcaption>In the kitchen</figcaption></figure></li>
         <li class="gitem gitem--tall">
           <figure><a class="gitem__link" href="assets/photos/white-wine-by-the-docks-1066.webp"><img src="assets/photos/white-wine-by-the-docks-1066.webp" srcset="assets/photos/white-wine-by-the-docks-640.webp 640w, assets/photos/white-wine-by-the-docks-1066.webp 1066w" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw" width="1066" height="1600" alt="Two glasses of white wine raised in a toast, with the docks in the background" loading="lazy" decoding="async"></a></figure>
+        </li>
+        <li class="gitem gitem--wide"><figure><a class="gitem__link" href="assets/photos/seafood-sharing-guests-1536.webp" data-caption="Made to share"><img src="assets/photos/seafood-sharing-guests-1200.webp" srcset="assets/photos/seafood-sharing-guests-640.webp 640w, assets/photos/seafood-sharing-guests-1200.webp 1200w, assets/photos/seafood-sharing-guests-1536.webp 1536w" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 66vw" width="1536" height="1024" alt="Guests sharing seafood plates and white wine around a table at The Melusine" loading="lazy" decoding="async"></a><figcaption>Made to share</figcaption></figure></li>
+        <li class="gitem">
+          <figure><a class="gitem__link" href="assets/photos/crab-chicory-close-up-1440.webp"><img src="assets/photos/crab-chicory-close-up-1200.webp" srcset="assets/photos/crab-chicory-close-up-640.webp 640w, assets/photos/crab-chicory-close-up-1200.webp 1200w, assets/photos/crab-chicory-close-up-1440.webp 1440w" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw" width="1440" height="1440" alt="White crab meat and a red, chunky crab mixture served in red chicory leaves, with shaved fennel and dots of yellow mayonnaise" loading="lazy" decoding="async"></a></figure>
+        </li>
+        <li class="gitem gitem--wide"><figure><a class="gitem__link" href="assets/photos/oyster-preparation-1536.webp" data-caption="Preparing oysters"><img src="assets/photos/oyster-preparation-1200.webp" srcset="assets/photos/oyster-preparation-640.webp 640w, assets/photos/oyster-preparation-1200.webp 1200w, assets/photos/oyster-preparation-1536.webp 1536w" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 66vw" width="1536" height="1024" alt="Hands opening an oyster over a black towel in the kitchen" loading="lazy" decoding="async"></a><figcaption>Preparing oysters</figcaption></figure></li>
+        <li class="gitem">
+          <figure><a class="gitem__link" href="assets/photos/three-wines-terrace-900.webp" data-caption="On the terrace"><img src="assets/photos/three-wines-terrace-900.webp" srcset="assets/photos/three-wines-terrace-640.webp 640w, assets/photos/three-wines-terrace-900.webp 900w" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw" width="900" height="900" alt="White, rosé and red wine on the terrace, with Ivory House behind" loading="lazy" decoding="async"></a><figcaption>On the terrace</figcaption></figure>
+        </li>
+        <li class="gitem gitem--wide"><figure><a class="gitem__link" href="assets/photos/plated-food-interior-1536.webp" data-caption="From our kitchen"><img src="assets/photos/plated-food-interior-1200.webp" srcset="assets/photos/plated-food-interior-640.webp 640w, assets/photos/plated-food-interior-1200.webp 1200w, assets/photos/plated-food-interior-1536.webp 1536w" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 66vw" width="1536" height="1024" alt="A plated dish with orange and green garnishes, with wine glasses and the restaurant interior behind" loading="lazy" decoding="async"></a><figcaption>From our kitchen</figcaption></figure></li>
+        <li class="gitem gitem--wide">
+          <figure><a class="gitem__link" href="assets/photos/blue-cocktail-overhead-1600.webp"><img src="assets/photos/blue-cocktail-overhead-1200.webp" srcset="assets/photos/blue-cocktail-overhead-640.webp 640w, assets/photos/blue-cocktail-overhead-1200.webp 1200w, assets/photos/blue-cocktail-overhead-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 66vw" width="1600" height="1066" alt="A blue cocktail with a dried orange slice, seen from above on a table" loading="lazy" decoding="async"></a></figure>
+        </li>
+        <li class="gitem gitem--wide"><figure><a class="gitem__link" href="assets/photos/dish-in-hands-1536.webp" data-caption="Served with care"><img src="assets/photos/dish-in-hands-1200.webp" srcset="assets/photos/dish-in-hands-640.webp 640w, assets/photos/dish-in-hands-1200.webp 1200w, assets/photos/dish-in-hands-1536.webp 1536w" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 66vw" width="1536" height="1024" alt="Two hands holding a textured ceramic bowl containing an orange dish with garnish" loading="lazy" decoding="async"></a><figcaption>Served with care</figcaption></figure></li>
+        <li class="gitem gitem--tall">
+          <figure><a class="gitem__link" href="assets/photos/red-wine-table-detail-1066.webp"><img src="assets/photos/red-wine-table-detail-1066.webp" srcset="assets/photos/red-wine-table-detail-640.webp 640w, assets/photos/red-wine-table-detail-1066.webp 1066w" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw" width="1066" height="1600" alt="A glass of red wine and its bottle on a laid table" loading="lazy" decoding="async"></a></figure>
         </li>
         <li class="gitem gitem--wide">
           <figure><a class="gitem__link" href="assets/photos/sharing-plates-with-guests-1600.webp"><img src="assets/photos/sharing-plates-with-guests-1200.webp" srcset="assets/photos/sharing-plates-with-guests-640.webp 640w, assets/photos/sharing-plates-with-guests-1200.webp 1200w, assets/photos/sharing-plates-with-guests-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 66vw" width="1600" height="1066" alt="Guests reaching for plates of seafood, with glasses of white wine on the table" loading="lazy" decoding="async"></a></figure>
         </li>
         <li class="gitem">
-          <figure><a class="gitem__link" href="assets/photos/crab-chicory-close-up-1440.webp"><img src="assets/photos/crab-chicory-close-up-1200.webp" srcset="assets/photos/crab-chicory-close-up-640.webp 640w, assets/photos/crab-chicory-close-up-1200.webp 1200w, assets/photos/crab-chicory-close-up-1440.webp 1440w" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw" width="1440" height="1440" alt="White crab meat and a red, chunky crab mixture served in red chicory leaves, with shaved fennel and dots of yellow mayonnaise" loading="lazy" decoding="async"></a></figure>
-        </li>
-        <li class="gitem">
           <figure><a class="gitem__link" href="assets/photos/seafood-sharing-spread-1283.webp"><img src="assets/photos/seafood-sharing-spread-1200.webp" srcset="assets/photos/seafood-sharing-spread-640.webp 640w, assets/photos/seafood-sharing-spread-1200.webp 1200w, assets/photos/seafood-sharing-spread-1283.webp 1283w" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw" width="1283" height="1283" alt="A table of shared dishes, including grilled octopus, chips, salads and white wine" loading="lazy" decoding="async"></a></figure>
-        </li>
-        <li class="gitem">
-          <figure><a class="gitem__link" href="assets/photos/three-wines-terrace-900.webp" data-caption="On the terrace"><img src="assets/photos/three-wines-terrace-900.webp" srcset="assets/photos/three-wines-terrace-640.webp 640w, assets/photos/three-wines-terrace-900.webp 900w" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw" width="900" height="900" alt="White, rosé and red wine on the terrace, with Ivory House behind" loading="lazy" decoding="async"></a><figcaption>On the terrace</figcaption></figure>
-        </li>
-        <li class="gitem gitem--wide">
-          <figure><a class="gitem__link" href="assets/photos/blue-cocktail-overhead-1600.webp"><img src="assets/photos/blue-cocktail-overhead-1200.webp" srcset="assets/photos/blue-cocktail-overhead-640.webp 640w, assets/photos/blue-cocktail-overhead-1200.webp 1200w, assets/photos/blue-cocktail-overhead-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 66vw" width="1600" height="1066" alt="A blue cocktail with a dried orange slice, seen from above on a table" loading="lazy" decoding="async"></a></figure>
-        </li>
-        <li class="gitem gitem--tall">
-          <figure><a class="gitem__link" href="assets/photos/red-wine-table-detail-1066.webp"><img src="assets/photos/red-wine-table-detail-1066.webp" srcset="assets/photos/red-wine-table-detail-640.webp 640w, assets/photos/red-wine-table-detail-1066.webp 1066w" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw" width="1066" height="1600" alt="A glass of red wine and its bottle on a laid table" loading="lazy" decoding="async"></a></figure>
         </li>
         <li class="gitem gitem--wide">
           <figure><a class="gitem__link" href="assets/photos/langoustines-wine-table-1600.webp"><img src="assets/photos/langoustines-wine-table-1200.webp" srcset="assets/photos/langoustines-wine-table-640.webp 640w, assets/photos/langoustines-wine-table-1200.webp 1200w, assets/photos/langoustines-wine-table-1600.webp 1600w" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 66vw" width="1600" height="1066" alt="Langoustines with a lemon wedge on a grey plate, beside a glass of white wine and the menu" loading="lazy" decoding="async"></a></figure>
@@ -155,6 +166,6 @@
   </footer>
 
   <script src="analytics.js?v=20261011-technical-completion" defer></script>
-  <script src="script.js?v=20261011-technical-completion" defer></script>
+  <script src="script.js?v=20261012-consistent-header" defer></script>
 </body>
 </html>

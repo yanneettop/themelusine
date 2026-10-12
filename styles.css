@@ -107,11 +107,7 @@ em { font-style: normal; }
   position: fixed; inset: 0 0 auto 0; z-index: 50; background: var(--navy);
   box-shadow: 0 1px 0 var(--line-light); transition: background-color .4s var(--ease), box-shadow .4s var(--ease);
 }
-/* Over a photographic hero, start transparent (JS only; without JS the bar stays solid) */
-.js .nav--over:not(.is-solid) {
-  background: rgba(0, 42, 68, .62); box-shadow: 0 1px 0 var(--line-light);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-}
+/* One solid header background on every page and scroll position. */
 
 .nav__inner {
   max-width: 1360px; height: var(--nav-h); margin: 0 auto; padding: 0 var(--gutter);
@@ -1114,4 +1110,52 @@ html:not(.js) .nav__toggle { display: none !important; }
   .event-topics .wrap { gap: 0 22px; }
   .page-private-hire .enquire__grid, .page-private-hire .split, .page-events .events-contact { grid-template-columns: 1fr; }
   .page-private-hire .split--flip .split__img { order: 0; }
+}
+
+/* Instagram: curated posts, three at a time, with native touch scrolling. */
+.page-index .instagram__layout { grid-template-columns: .8fr 2.2fr; align-items: center; }
+.instagram__carousel { min-width: 0; }
+.page-index .instagram__photos { display: flex; gap: 16px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-padding-inline: 4px; scrollbar-width: none; padding: 4px; margin: -4px; }
+.instagram__photos::-webkit-scrollbar { display: none; }
+.instagram__photos > li { flex: 0 0 calc((100% - 32px) / 3); min-width: 0; scroll-snap-align: start; }
+.page-index .instagram__image { aspect-ratio: 1; }
+.instagram__controls { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 20px; }
+.instagram__controls[hidden] { display: none; }
+.instagram__position { margin: 0; color: var(--charcoal-soft); font-size: 12px; }
+.instagram__arrows { display: flex; gap: 8px; }
+.instagram__arrow { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--line-dark); background: transparent; color: var(--navy); font-size: 23px; cursor: pointer; }
+.instagram__arrow:hover:not(:disabled) { background: var(--navy); color: var(--white); }
+.instagram__arrow:disabled { opacity: .35; cursor: default; }
+.instagram__arrow:focus-visible, .instagram__photos:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+@media (max-width: 860px) {
+  .page-index .instagram__layout { grid-template-columns: 1fr; gap: 24px; }
+}
+@media (max-width: 699px) {
+  .instagram__photos > li { flex-basis: 100%; }
+  .page-index .instagram__post figcaption { font-size: 13px; }
+  .instagram__controls { margin-top: 16px; }
+}
+
+/* Header social link alongside booking; preserve room on small screens. */
+.nav__ig { display: inline-flex; flex: 0 0 44px; margin: 0; }
+.nav__ig:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+@media (max-width: 600px) {
+  .nav__book .long { display: none; }
+  .nav__book .short { display: inline; }
+}
+@media (max-width: 380px) {
+  .nav__inner { gap: 6px; }
+  .brand__wordmark { width: 88px; height: 8px; }
+  .nav__book { padding-inline: 10px; }
+}
+@media (max-width: 980px) {
+  html:not(.js) .nav__inner { grid-template-columns: minmax(0, 1fr) auto auto; }
+  html:not(.js) .nav__ig { grid-column: 3; grid-row: 1; }
+}
+
+/* Keep the selected food and chef photographs in their original proportions. */
+.page-about .chef-photo { width: min(100%, 380px); justify-self: center; }
+.page-about .chef-photo img { aspect-ratio: 2 / 3; object-fit: cover; }
+@media (max-width: 600px) {
+  .gitem--chef { aspect-ratio: 2 / 3; }
 }

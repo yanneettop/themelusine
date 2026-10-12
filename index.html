@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261011-technical-completion">
+  <link rel="stylesheet" href="styles.css?v=20261012-consistent-header">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -47,17 +47,20 @@
 
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="nav nav--over" id="nav">
+  <!-- Shared header:start -->
+  <header class="nav" id="nav">
     <nav class="nav__inner" aria-label="Main">
-      <a class="brand brand--horizontal" href="#top" aria-label="The Melusine, home"><img class="brand__mark" src="assets/mark.webp" alt="" width="359" height="358"><span class="brand__wordmark" aria-hidden="true"></span></a>
+      <a class="brand brand--horizontal" href="index.html" aria-label="The Melusine, home"><img class="brand__mark" src="assets/mark.webp" alt="" width="359" height="358"><span class="brand__wordmark" aria-hidden="true"></span></a>
       <div class="nav__end">
         <ul class="nav__links">
+          <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="menu.html">Menus</a></li>
           <li><a href="private-hire.html">Private hire</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="about.html">Our story</a></li>
         </ul>
-        <a class="btn btn--gold btn--sm nav__book" href="https://www.opentable.co.uk/r/the-melusine-reservations-london?restref=206064&amp;lang=en-GB&amp;ot_source=Restaurant%20website" target="_blank" rel="noopener" aria-label="Book a table"><span class="long">Book a table</span><span class="short">Book</span></a>
+        <a class="btn btn--gold btn--sm nav__book" href="https://www.opentable.co.uk/r/the-melusine-reservations-london?restref=206064&amp;lang=en-GB&amp;ot_source=Restaurant%20website" target="_blank" rel="noopener noreferrer" aria-label="Book a table"><span class="long">Book a table</span><span class="short">Book</span></a>
+        <a class="nav__ig" href="https://www.instagram.com/themelusine_skd/" target="_blank" rel="noopener noreferrer" aria-label="The Melusine on Instagram (opens in a new tab)"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="ig-icon__dot"/></svg></a>
       </div>
       <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span></button>
     </nav>
@@ -65,6 +68,7 @@
 
   <div class="drawer" id="drawer" hidden>
     <nav aria-label="Mobile">
+      <a href="index.html" aria-current="page">Home</a>
       <a href="menu.html">Menus</a>
       <a href="private-hire.html">Private hire</a>
       <a href="events.html">Events</a>
@@ -72,11 +76,12 @@
       <a class="drawer__drinks" href="menu.html#drinks">Drinks &amp; wine</a>
     </nav>
     <div>
-      <a class="btn btn--gold" href="https://www.opentable.co.uk/r/the-melusine-reservations-london?restref=206064&amp;lang=en-GB&amp;ot_source=Restaurant%20website" target="_blank" rel="noopener">Book a table</a>
+      <a class="btn btn--gold" href="https://www.opentable.co.uk/r/the-melusine-reservations-london?restref=206064&amp;lang=en-GB&amp;ot_source=Restaurant%20website" target="_blank" rel="noopener noreferrer">Book a table</a>
       <p class="drawer__meta">Ivory House, St Katharine Docks, London E1W 1AT<br><a href="tel:+442077022976">020 7702 2976</a></p>
-      <a class="drawer__ig" href="https://www.instagram.com/themelusine_skd/" target="_blank" rel="noopener"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="ig-icon__dot"/></svg><span>@themelusine_skd</span></a>
+      <a class="drawer__ig" href="https://www.instagram.com/themelusine_skd/" target="_blank" rel="noopener noreferrer"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="ig-icon__dot"/></svg><span>@themelusine_skd</span></a>
     </div>
   </div>
+  <!-- Shared header:end -->
 
   <main id="main">
 
@@ -149,7 +154,7 @@
     <section class="hire section" id="private-hire" aria-labelledby="hire-title">
       <div class="wrap hire__grid">
         <figure class="hire__photo">
-          <img src="assets/photos/dining-room-fish-mural-1200.webp" srcset="assets/photos/dining-room-fish-mural-640.webp 640w, assets/photos/dining-room-fish-mural-1200.webp 1200w, assets/photos/dining-room-fish-mural-1439.webp 1439w" sizes="(max-width: 860px) 92vw, 45vw" width="1439" height="959" alt="Tables laid for guests in The Melusine’s dining room, with teal banquettes and mustard chairs" loading="lazy" decoding="async">
+          <img src="assets/photos/private-hire-toast-1200.webp" srcset="assets/photos/private-hire-toast-640.webp 640w, assets/photos/private-hire-toast-1200.webp 1200w, assets/photos/private-hire-toast-1536.webp 1536w" sizes="(max-width: 860px) 92vw, 45vw" width="1536" height="1024" alt="Two guests raising glasses of white wine in a toast inside The Melusine" loading="lazy" decoding="async">
         </figure>
         <div class="hire__body">
           <p class="eyebrow">Private hire</p>
@@ -263,30 +268,62 @@
           <p class="instagram__note">A few moments from the table and the water.</p>
           <a class="instagram__handle" href="https://www.instagram.com/themelusine_skd/" target="_blank" rel="noopener noreferrer"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="ig-icon__dot"/></svg><span>@themelusine_skd</span></a>
         </div>
-        <ul class="instagram__photos" aria-label="Selected Instagram posts">
-          <li>
-            <a class="instagram__post" href="https://www.instagram.com/p/Chrp48WI1DL/" target="_blank" rel="noopener noreferrer" aria-label="View our fish dish post on Instagram (opens in a new tab)">
-              <figure>
-                <div class="instagram__image">
-                  <img src="assets/photos/instagram-fish-dish-800.webp" srcset="assets/photos/instagram-fish-dish-400.webp 400w, assets/photos/instagram-fish-dish-800.webp 800w" sizes="(max-width: 860px) 46vw, 22vw" width="1440" height="1079" alt="A fish dish with golden sauce held on a white plate beside the docks" loading="lazy" decoding="async">
-                  <span class="instagram__badge" aria-hidden="true"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="ig-icon__dot"/></svg></span>
-                </div>
-                <figcaption>At the table <span aria-hidden="true">↗</span></figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a class="instagram__post" href="https://www.instagram.com/p/DeJuAhuosrm/" target="_blank" rel="noopener noreferrer" aria-label="View our wine post on Instagram (opens in a new tab)">
-              <figure>
-                <div class="instagram__image instagram__image--wine">
-                  <img src="assets/photos/instagram-wine-moment-800.webp" srcset="assets/photos/instagram-wine-moment-400.webp 400w, assets/photos/instagram-wine-moment-800.webp 800w" sizes="(max-width: 860px) 46vw, 22vw" width="1600" height="2133" alt="A black and white photograph of a hand holding a wine glass beside a bottle" loading="lazy" decoding="async">
-                  <span class="instagram__badge" aria-hidden="true"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" class="ig-icon__dot"/></svg></span>
-                </div>
-                <figcaption>A glass by the docks <span aria-hidden="true">↗</span></figcaption>
-              </figure>
-            </a>
-          </li>
-        </ul>
+        <div class="instagram__carousel" role="group" aria-roledescription="carousel" aria-label="Selected Instagram posts">
+          <ul class="instagram__photos" id="instagram-posts" tabindex="0" aria-label="Instagram posts; use arrow keys to browse" aria-describedby="instagram-position">
+            <li>
+              <a class="instagram__post" href="https://www.instagram.com/p/Chrp48WI1DL/" target="_blank" rel="noopener noreferrer" aria-label="At the table — view post on Instagram (opens in a new tab)">
+                <figure><div class="instagram__image"><img src="assets/photos/instagram-fish-dish-800.webp" srcset="assets/photos/instagram-fish-dish-400.webp 400w, assets/photos/instagram-fish-dish-800.webp 800w" sizes="(max-width: 699px) 92vw, (max-width: 860px) 30vw, 22vw" width="1440" height="1079" alt="A fish dish with golden sauce held on a white plate beside the docks" style="object-position:center 65%" loading="lazy" decoding="async"></div><figcaption>At the table <span aria-hidden="true">↗</span></figcaption></figure>
+              </a>
+            </li>
+            <li>
+              <a class="instagram__post" href="https://www.instagram.com/p/DeJuAhuosrm/" target="_blank" rel="noopener noreferrer" aria-label="A glass by the docks — view post on Instagram (opens in a new tab)">
+                <figure><div class="instagram__image"><img src="assets/photos/instagram-wine-moment-800.webp" srcset="assets/photos/instagram-wine-moment-400.webp 400w, assets/photos/instagram-wine-moment-800.webp 800w" sizes="(max-width: 699px) 92vw, (max-width: 860px) 30vw, 22vw" width="1600" height="2133" alt="A black and white photograph of a hand holding a wine glass beside a bottle" style="object-position:center 45%" loading="lazy" decoding="async"></div><figcaption>A glass by the docks <span aria-hidden="true">↗</span></figcaption></figure>
+              </a>
+            </li>
+            <li>
+              <a class="instagram__post" href="https://www.instagram.com/p/B3OxsdknSEA/" target="_blank" rel="noopener noreferrer" aria-label="Fresh seafood — view post on Instagram (opens in a new tab)">
+                <figure><div class="instagram__image"><img src="assets/photos/instagram-prawns-800.webp" srcset="assets/photos/instagram-prawns-400.webp 400w, assets/photos/instagram-prawns-800.webp 800w" sizes="(max-width: 699px) 92vw, (max-width: 860px) 30vw, 22vw" width="1440" height="1440" alt="Prawns and shellfish on a wire rack" style="object-position:center" loading="lazy" decoding="async"></div><figcaption>Fresh seafood <span aria-hidden="true">↗</span></figcaption></figure>
+              </a>
+            </li>
+            <li>
+              <a class="instagram__post" href="https://www.instagram.com/p/DeZdnRdo7yD/" target="_blank" rel="noopener noreferrer" aria-label="In the kitchen — view post on Instagram (opens in a new tab)">
+                <figure><div class="instagram__image"><img src="assets/photos/instagram-DeZdnRdo7yD-800.webp" srcset="assets/photos/instagram-DeZdnRdo7yD-400.webp 400w, assets/photos/instagram-DeZdnRdo7yD-800.webp 800w" sizes="(max-width: 699px) 92vw, (max-width: 860px) 30vw, 22vw" width="2048" height="2731" alt="A chef preparing dishes in the open kitchen at The Melusine" style="object-position:center 35%" loading="lazy" decoding="async"></div><figcaption>In the kitchen <span aria-hidden="true">↗</span></figcaption></figure>
+              </a>
+            </li>
+            <li>
+              <a class="instagram__post" href="https://www.instagram.com/p/Dd321g0iJOn/" target="_blank" rel="noopener noreferrer" aria-label="Something sweet — view post on Instagram (opens in a new tab)">
+                <figure><div class="instagram__image"><img src="assets/photos/instagram-Dd321g0iJOn-800.webp" srcset="assets/photos/instagram-Dd321g0iJOn-400.webp 400w, assets/photos/instagram-Dd321g0iJOn-800.webp 800w" sizes="(max-width: 699px) 92vw, (max-width: 860px) 30vw, 22vw" width="1170" height="1170" alt="A dessert topped with nuts and small yellow fruits, with a ring of golden sauce" style="object-position:center" loading="lazy" decoding="async"></div><figcaption>Something sweet <span aria-hidden="true">↗</span></figcaption></figure>
+              </a>
+            </li>
+            <li>
+              <a class="instagram__post" href="https://www.instagram.com/p/DdwfAuQiCPK/" target="_blank" rel="noopener noreferrer" aria-label="From the kitchen — view post on Instagram (opens in a new tab)">
+                <figure><div class="instagram__image"><img src="assets/photos/instagram-DdwfAuQiCPK-800.webp" srcset="assets/photos/instagram-DdwfAuQiCPK-400.webp 400w, assets/photos/instagram-DdwfAuQiCPK-800.webp 800w" sizes="(max-width: 699px) 92vw, (max-width: 860px) 30vw, 22vw" width="1200" height="1591" alt="A cooked lobster served with herbs and salad on a white plate" style="object-position:center" loading="lazy" decoding="async"></div><figcaption>From the kitchen <span aria-hidden="true">↗</span></figcaption></figure>
+              </a>
+            </li>
+            <li>
+              <a class="instagram__post" href="https://www.instagram.com/p/DdtQBAoiMKr/" target="_blank" rel="noopener noreferrer" aria-label="From the boats — view post on Instagram (opens in a new tab)">
+                <figure><div class="instagram__image"><img src="assets/photos/instagram-DdtQBAoiMKr-800.webp" srcset="assets/photos/instagram-DdtQBAoiMKr-400.webp 400w, assets/photos/instagram-DdtQBAoiMKr-800.webp 800w" sizes="(max-width: 699px) 92vw, (max-width: 860px) 30vw, 22vw" width="900" height="1200" alt="A hand holding a spiny lobster above seafood delivery crates" style="object-position:center" loading="lazy" decoding="async"></div><figcaption>From the boats <span aria-hidden="true">↗</span></figcaption></figure>
+              </a>
+            </li>
+            <li>
+              <a class="instagram__post" href="https://www.instagram.com/p/CpcjsvboLRO/" target="_blank" rel="noopener noreferrer" aria-label="Inside The Melusine — view post on Instagram (opens in a new tab)">
+                <figure><div class="instagram__image"><img src="assets/photos/instagram-CpcjsvboLRO-800.webp" srcset="assets/photos/instagram-CpcjsvboLRO-400.webp 400w, assets/photos/instagram-CpcjsvboLRO-800.webp 800w" sizes="(max-width: 699px) 92vw, (max-width: 860px) 30vw, 22vw" width="1439" height="959" alt="The dining room with fish artwork, teal seating and tables set for guests" style="object-position:center" loading="lazy" decoding="async"></div><figcaption>Inside The Melusine <span aria-hidden="true">↗</span></figcaption></figure>
+              </a>
+            </li>
+            <li>
+              <a class="instagram__post" href="https://www.instagram.com/p/Ddqo7V5CE0c/" target="_blank" rel="noopener noreferrer" aria-label="Gather with us — view post on Instagram (opens in a new tab)">
+                <figure><div class="instagram__image"><img src="assets/photos/instagram-Ddqo7V5CE0c-800.webp" srcset="assets/photos/instagram-Ddqo7V5CE0c-400.webp 400w, assets/photos/instagram-Ddqo7V5CE0c-800.webp 800w" sizes="(max-width: 699px) 92vw, (max-width: 860px) 30vw, 22vw" width="1080" height="1440" alt="The Melusine Events 2026/2027 artwork with a gold logo above blue waves" style="object-position:center" loading="lazy" decoding="async"></div><figcaption>Gather with us <span aria-hidden="true">↗</span></figcaption></figure>
+              </a>
+            </li>
+          </ul>
+          <div class="instagram__controls" hidden>
+            <p class="instagram__position" id="instagram-position" aria-live="polite" aria-atomic="true">Posts 1–3 of 9</p>
+            <div class="instagram__arrows">
+              <button class="instagram__arrow" type="button" data-instagram-prev aria-label="Previous Instagram posts" aria-controls="instagram-posts"><span aria-hidden="true">←</span></button>
+              <button class="instagram__arrow" type="button" data-instagram-next aria-label="Next Instagram posts" aria-controls="instagram-posts"><span aria-hidden="true">→</span></button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -366,6 +403,6 @@
   </footer>
 
   <script src="analytics.js?v=20261011-technical-completion" defer></script>
-  <script src="script.js?v=20261011-technical-completion" defer></script>
+  <script src="script.js?v=20261012-consistent-header" defer></script>
 </body>
 </html>
