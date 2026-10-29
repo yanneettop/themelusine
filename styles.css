@@ -1048,27 +1048,6 @@ html:not(.js) .nav__toggle { display: none !important; }
 .gather-options h3 { font-size: clamp(24px, 2.6vw, 30px); line-height: 1.2; color: var(--navy); margin-bottom: 18px; }
 .gather-options article > p:not(.gather-options__number) { max-width: 46ch; color: var(--charcoal-soft); }
 .hire-layout { border-top: 1px solid var(--line-dark); }
-.floorplans { display: grid; gap: clamp(32px, 4vw, 56px); margin-top: clamp(32px, 4vw, 56px); }
-.floorplans__plan { margin: 0; min-width: 0; }
-.floorplans__plan figcaption { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 20px; margin-bottom: 16px; }
-.floorplans__plan h3 { color: var(--navy); font-size: clamp(23px, 2.4vw, 30px); line-height: 1.2; }
-.floorplans__plan figcaption p { margin: 0; color: var(--charcoal-soft); }
-.floorplans__link { height: auto; color: var(--teal); text-decoration: none; }
-.floorplans__link img { width: 100%; height: auto; }
-.floorplans__link > span { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 8px; text-decoration: underline; text-underline-offset: 5px; font-size: 14px; }
-.floorplans__original { margin: 0; }
-.lightbox--plans .lightbox__figure { width: 100%; min-width: 0; grid-template-columns: minmax(0, 1fr); padding: 72px 76px 88px; }
-.floorplans__viewport { width: 100%; min-width: 0; overflow: auto; max-height: calc(100dvh - 260px); overscroll-behavior: contain; }
-.floorplans__viewport:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
-.lightbox--plans .lightbox__img { width: max(100%, 1200px); max-width: none; max-height: none; }
-.lightbox--plans .lightbox__caption { text-align: center; }
-.floorplans__help { margin: 0; max-width: 45ch; text-align: center; font-size: 14px; color: var(--grey); }
-@media (max-width: 699px) {
-  .lightbox--plans .lightbox__figure { padding: 64px 16px 88px; }
-  .lightbox--plans .lightbox__prev, .lightbox--plans .lightbox__next { top: auto; bottom: 18px; translate: none; }
-  .lightbox--plans .lightbox__prev { left: calc(50% - 60px); }
-  .lightbox--plans .lightbox__next { right: calc(50% - 60px); }
-}
 .layout-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--occasion-gap); }
 .layout-grid > div > p { max-width: 44ch; color: var(--charcoal-soft); }
 .layout-notes { margin: 0; }
