@@ -145,6 +145,8 @@
       lbImg.alt = thumb.alt;
       lbCaption.textContent = link.dataset.caption || '';
       lbCount.textContent = (index + 1) + ' / ' + galleryLinks.length;
+      const planViewport = lightbox.querySelector('.floorplans__viewport');
+      if (planViewport) planViewport.scrollTo(0, 0);
     };
     galleryLinks.forEach((link, i) => link.addEventListener('click', (e) => {
       e.preventDefault();
@@ -157,6 +159,7 @@
     lightbox.querySelector('.lightbox__prev').addEventListener('click', () => show(index - 1));
     lightbox.querySelector('.lightbox__next').addEventListener('click', () => show(index + 1));
     lightbox.addEventListener('keydown', (e) => {
+      if (e.target.classList.contains('floorplans__viewport')) return;
       if (e.key === 'ArrowLeft') { e.preventDefault(); show(index - 1); }
       if (e.key === 'ArrowRight') { e.preventDefault(); show(index + 1); }
     });
@@ -169,7 +172,11 @@
     lightbox.addEventListener('toggle', () => { if (lightbox.open) doc.style.overflow = 'hidden'; });
     // Swipe left/right on touch screens
     let touchX = null;
-    lightbox.addEventListener('touchstart', (e) => { touchX = e.touches[0].clientX; }, { passive: true });
+    lightbox.addEventListener('touchstart', (e) => {
+      // Floor plans pan inside the viewer; a swipe must not switch layouts.
+      if (lightbox.classList.contains('lightbox--plans')) return;
+      touchX = e.touches[0].clientX;
+    }, { passive: true });
     lightbox.addEventListener('touchend', (e) => {
       if (touchX === null) return;
       const dx = e.changedTouches[0].clientX - touchX;
